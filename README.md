@@ -57,3 +57,34 @@ chart{
     #nomeDaImagem
 }
 ```
+#Construindo o projeto:
+- O projeto está no Maven, e possui como dependencias o jfreechart e o próprio antlr.
+```maven
+<dependencies>
+        <dependency>
+            <groupId>jfree</groupId>
+            <artifactId>jfreechart</artifactId>
+            <version>1.0.13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr4-maven-plugin</artifactId>
+            <version>4.5</version>
+        </dependency>
+</dependencies>
+```
+- O projeto já está pré-compilado, mas caso queira gerar os Lexers e os Parsers, é necessário utilizar o antlr4 para compilar o MyLang.g4 utilize o comando abaixo:
+```bash
+antlr4 MyLang.g4 -o ./gen/ -package gen
+```
+
+- Depois compile os arquivos .java gerados e os arquivos das classes de suporte utilizando o javac:
+```bash
+javac nomeArquivo.java
+```
+- Para ler a sua linguagem execute o programa com o argumento sendo o caminho do arquivo!
+```bash
+java gen.MyLang -test.gr
+```
+
+.- Obs.: O Testing.java irá interpretar o arquivo test que está no raiz do projeto
