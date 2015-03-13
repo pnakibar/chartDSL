@@ -4,15 +4,18 @@ grammar MyLang;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.ChartFactory;
 }
+
 expr returns [Data result]
-        :r = adddata {$result = $r.result;}
+        :adddata
         ;
 
 
 adddata returns [Data result]
         : PIE piedata {$result = $piedata.result;}
-        /*|CHART chartdata {$result = chartdata.result;}*/
+        | CHART chartdata {$result = $chartdata.result;}
         ;
+
+
 
 piedata returns [Data result]
 @init   {
@@ -36,6 +39,7 @@ chartdata returns [Data result]
         RBR {$result = data;}
     ;
 
+
 PIE : 'pie';
 CHART : 'chart';
 COMMA   : ',';
@@ -47,10 +51,12 @@ LBR     : '{';
 RBR     : '}';
 TWP     : ':';
 
-VARNAME : [a-zA-z]+;
 
-NUM     : DIGIT+ ;
 fragment DIGIT : [0-9] ;
+fragment ALPHA : [_a-zA-Z] ;
+NUM     : DIGIT+ ;
+VARNAME : ALPHA+;
 
 ASSIGNMENT : ':=';
+
 WS      : [ \n]+ -> skip ;

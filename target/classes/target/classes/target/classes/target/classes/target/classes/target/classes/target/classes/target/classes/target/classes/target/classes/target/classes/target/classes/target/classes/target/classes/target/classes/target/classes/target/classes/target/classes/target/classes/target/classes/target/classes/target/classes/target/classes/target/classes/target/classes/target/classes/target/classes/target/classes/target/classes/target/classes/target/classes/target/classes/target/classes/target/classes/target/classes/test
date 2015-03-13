@@ -1,4 +1,6 @@
-pie{
-    apple:3,
-    microsoft:4
+chart{
+    apple:qq:3,
+    microsoft:qq:4
 }
+
+

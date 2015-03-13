@@ -8,11 +8,13 @@ RPAR=7
 LBR=8
 RBR=9
 TWP=10
-NUM=11
-VARNAME=12
-ID=13
-ASSIGNMENT=14
-WS=15
+WINDOW=11
+JPG=12
+PNG=13
+NUM=14
+VARNAME=15
+ASSIGNMENT=16
+WS=17
 'pie'=1
 'chart'=2
 ','=3
@@ -23,4 +25,7 @@ WS=15
 '{'=8
 '}'=9
 ':'=10
-':='=14
+'window'=11
+'jpg'=12
+'png'=13
+':='=16

@@ -24,6 +24,36 @@ public interface MyLangListener extends ParseTreeListener {
 	 */
 	void exitExpr(@NotNull MyLangParser.ExprContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link MyLangParser#getshowas}.
+	 * @param ctx the parse tree
+	 */
+	void enterGetshowas(@NotNull MyLangParser.GetshowasContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MyLangParser#getshowas}.
+	 * @param ctx the parse tree
+	 */
+	void exitGetshowas(@NotNull MyLangParser.GetshowasContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link MyLangParser#showAsPNG}.
+	 * @param ctx the parse tree
+	 */
+	void enterShowAsPNG(@NotNull MyLangParser.ShowAsPNGContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MyLangParser#showAsPNG}.
+	 * @param ctx the parse tree
+	 */
+	void exitShowAsPNG(@NotNull MyLangParser.ShowAsPNGContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link MyLangParser#showAsJPEG}.
+	 * @param ctx the parse tree
+	 */
+	void enterShowAsJPEG(@NotNull MyLangParser.ShowAsJPEGContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MyLangParser#showAsJPEG}.
+	 * @param ctx the parse tree
+	 */
+	void exitShowAsJPEG(@NotNull MyLangParser.ShowAsJPEGContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link MyLangParser#getname}.
 	 * @param ctx the parse tree
 	 */

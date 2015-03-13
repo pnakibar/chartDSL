@@ -3,19 +3,35 @@ grammar MyLang;
 @header {
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.ChartFactory;
+import org.jfree.chart.JFreeChart;
 }
 
-expr returns [Data result]
-        :adddata
+expr returns [JFreeChart result]
+        :getname SHOWAS getshowas getdata {$result = ($getdata.result).createChart($getname.name);}
+        ;
+
+getshowas
+        :PNG    a=showAsPNG {System.out.printf($a.result);}
+        |JPEG    showAsJPEG
+        //TODO: WINDOW view
+        ;
+
+showAsPNG returns [Save result]
+        :LPAR height=NUM X width=NUM RPAR {$result = new SavePNG($height, $width);}
+        ;
+showAsJPEG returns [Save result]
+        :LPAR height=NUM X width=NUM RPAR {$result = new SaveJPEG($height, $width);}
         ;
 
 
-adddata returns [Data result]
+getname returns [String name]
+        :VARNAME TWP {$name = $VARNAME.text;}
+        ;
+
+getdata returns [Data result]
         : PIE piedata {$result = $piedata.result;}
         | CHART chartdata {$result = $chartdata.result;}
         ;
-
-
 
 piedata returns [Data result]
 @init   {
@@ -40,6 +56,7 @@ chartdata returns [Data result]
     ;
 
 
+
 PIE : 'pie';
 CHART : 'chart';
 COMMA   : ',';
@@ -50,6 +67,12 @@ RPAR    : ')' ;
 LBR     : '{';
 RBR     : '}';
 TWP     : ':';
+X : 'x';
+
+SHOWAS : 'show as';
+WINDOW  : 'window';
+JPEG     : 'jpeg';
+PNG     : 'png';
 
 
 fragment DIGIT : [0-9] ;

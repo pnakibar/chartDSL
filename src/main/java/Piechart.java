@@ -1,4 +1,6 @@
 import java.io.*;
+
+import gen.Chart;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
@@ -26,5 +28,6 @@ public class Piechart {
         int height = 480; /* Height of the image */
         File pieChart = new File( "PieChart.jpeg" );
         ChartUtilities.saveChartAsJPEG( pieChart , chart , width , height );
+
     }
 }

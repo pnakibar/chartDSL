@@ -1,0 +1,14 @@
+chart{
+    apple:qq:3,
+    microsoft:qq:4
+}
+
+pie{
+    apple:4,
+    microsoft:5
+}
+
+chart:show as %png(%width x %height) as a %pie{
+    apple:4,
+    microsoft:5
+}

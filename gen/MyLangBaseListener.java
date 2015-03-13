@@ -34,6 +34,42 @@ public class MyLangBaseListener implements MyLangListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterGetshowas(@NotNull MyLangParser.GetshowasContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitGetshowas(@NotNull MyLangParser.GetshowasContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterShowAsPNG(@NotNull MyLangParser.ShowAsPNGContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitShowAsPNG(@NotNull MyLangParser.ShowAsPNGContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterShowAsJPEG(@NotNull MyLangParser.ShowAsJPEGContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitShowAsJPEG(@NotNull MyLangParser.ShowAsJPEGContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterGetname(@NotNull MyLangParser.GetnameContext ctx) { }
 	/**
 	 * {@inheritDoc}

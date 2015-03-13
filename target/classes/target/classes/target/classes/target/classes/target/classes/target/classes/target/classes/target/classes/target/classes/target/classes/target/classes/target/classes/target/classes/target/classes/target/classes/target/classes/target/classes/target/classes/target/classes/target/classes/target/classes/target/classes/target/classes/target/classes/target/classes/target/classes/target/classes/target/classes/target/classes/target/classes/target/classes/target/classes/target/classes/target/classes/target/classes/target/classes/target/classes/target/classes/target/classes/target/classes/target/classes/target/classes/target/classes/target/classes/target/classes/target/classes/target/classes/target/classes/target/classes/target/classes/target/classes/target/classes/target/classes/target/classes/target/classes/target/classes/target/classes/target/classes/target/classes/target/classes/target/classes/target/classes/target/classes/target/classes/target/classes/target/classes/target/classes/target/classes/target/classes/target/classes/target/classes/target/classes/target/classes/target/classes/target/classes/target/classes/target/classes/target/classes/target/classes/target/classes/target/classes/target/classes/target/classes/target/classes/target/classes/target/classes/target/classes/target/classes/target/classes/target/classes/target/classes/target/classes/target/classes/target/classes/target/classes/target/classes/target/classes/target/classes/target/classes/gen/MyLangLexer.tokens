@@ -1,14 +1,3 @@
-T__0=1
-T__1=2
-MULT=3
-DIV=4
-PLUS=5
-MINUS=6
-DIGIT=7
-NUM=8
-'('=1
-')'=2
-'*'=3
-'/'=4
-'+'=5
-'-'=6
+VARNAME=1
+ASSIGNMENT=2
+':='=2
