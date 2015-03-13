@@ -10,9 +10,9 @@ RBR=9
 TWP=10
 NUM=11
 VARNAME=12
-ID=13
-ASSIGNMENT=14
-WS=15
+ASSIGNMENT=13
+WS=14
+ALPHA=15
 'pie'=1
 'chart'=2
 ','=3
@@ -23,4 +23,4 @@ WS=15
 '{'=8
 '}'=9
 ':'=10
-':='=14
+':='=13

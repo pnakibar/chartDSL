@@ -19,5 +19,7 @@ public class Testing {
         MyLangParser parser = new MyLangParser(tokens);
         MyLangParser.ExprContext ctx = parser.expr();
         System.out.printf(">>> %s\n", ctx.result);
+
+
     }
 }

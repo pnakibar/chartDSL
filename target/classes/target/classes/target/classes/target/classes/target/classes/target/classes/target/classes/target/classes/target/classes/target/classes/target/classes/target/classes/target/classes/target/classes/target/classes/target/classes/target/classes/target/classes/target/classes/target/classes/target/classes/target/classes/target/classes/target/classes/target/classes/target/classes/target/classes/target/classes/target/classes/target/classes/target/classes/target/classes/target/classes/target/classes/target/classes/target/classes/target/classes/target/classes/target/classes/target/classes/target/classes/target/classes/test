@@ -1,2 +1,4 @@
-x := 1;y := 2;z := 3;
-end
+pie{
+    apple:3,
+    microsoft:4
+}

@@ -31,10 +31,11 @@ chartdata returns [Data result]
         }
     :
         LBR
-            column=VARNAME TWP line=ALPHAN TWP value=NUM {data.add($column.text, $line.text, $value.text);}
-            (COMMA column=VARNAME TWP line=ALPHAN TWP value=NUM {data.add($column.text, $line.text, $value.text);})*
+            column=VARNAME TWP line=VARNAME TWP value=NUM {data.add($column.text, $line.text, $value.text);}
+            (COMMA column=VARNAME TWP line=VARNAME TWP value=NUM {data.add($column.text, $line.text, $value.text);})*
         RBR {$result = data;}
     ;
+
 
 PIE : 'pie';
 CHART : 'chart';
@@ -47,10 +48,12 @@ LBR     : '{';
 RBR     : '}';
 TWP     : ':';
 
-VARNAME : [a-zA-z]+;
-ALPHAN : [a-zA-Z0-9]+;
-NUM     : DIGIT+ ;
+
 fragment DIGIT : [0-9] ;
+fragment ALPHA : [_a-zA-Z] ;
+NUM     : DIGIT+ ;
+VARNAME : ALPHA+;
 
 ASSIGNMENT : ':=';
+
 WS      : [ \n]+ -> skip ;

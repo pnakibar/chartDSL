@@ -10,8 +10,8 @@ expr returns [Data result]
 
 
 adddata returns [Data result]
-        :piedata {$result = $piedata.result;}
-        /*|CHART chartdata {$result = chartdata.result;}*/
+        : PIE piedata {$result = $piedata.result;}
+        |CHART chartdata {$result = chartdata.result;}
         ;
 
 piedata returns [Data result]

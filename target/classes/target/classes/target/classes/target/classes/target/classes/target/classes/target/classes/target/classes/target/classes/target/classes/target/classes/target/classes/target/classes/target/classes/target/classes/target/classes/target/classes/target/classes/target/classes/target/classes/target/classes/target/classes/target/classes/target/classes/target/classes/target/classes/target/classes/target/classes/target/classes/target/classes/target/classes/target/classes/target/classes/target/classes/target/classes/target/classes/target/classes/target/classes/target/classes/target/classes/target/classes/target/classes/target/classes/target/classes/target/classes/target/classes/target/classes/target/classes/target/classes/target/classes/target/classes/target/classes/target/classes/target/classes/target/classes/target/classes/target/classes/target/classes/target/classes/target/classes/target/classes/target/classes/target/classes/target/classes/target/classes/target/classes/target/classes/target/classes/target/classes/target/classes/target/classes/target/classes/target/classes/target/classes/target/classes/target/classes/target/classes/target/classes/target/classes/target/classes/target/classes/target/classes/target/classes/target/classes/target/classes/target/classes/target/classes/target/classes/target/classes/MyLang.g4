@@ -7,21 +7,23 @@
 grammar MyLang;
 
 
-expr    :   expr1 ((PLUS | MINUS) expr1)*
+expr    :  definevar
         ;
 
-expr1   :   expr2 ((MULT | DIV) expr2)*
+definevar
+        : VARNAME ASSIGNMENT CHARTS
         ;
 
-expr2   : NUM
-        | '-' expr2
-        | '(' expr ')'
-        ;
+CHARTS  : 'pie'
+        | 'line';
 
+VARNAME : [a-zA-z]+;
+TYPE    : '[a-zA-z]+';
 MULT    : '*' ;
 DIV     : '/' ;
 PLUS    : '+' ;
 MINUS   : '-' ;
+ASSIGNMENT : ':=';
 
 DIGIT   : [0-9]
         ;

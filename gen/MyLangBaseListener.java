@@ -3,6 +3,7 @@ package gen;
 
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.ChartFactory;
+import org.jfree.chart.JFreeChart;
 
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -33,13 +34,25 @@ public class MyLangBaseListener implements MyLangListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAdddata(@NotNull MyLangParser.AdddataContext ctx) { }
+	@Override public void enterGetname(@NotNull MyLangParser.GetnameContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAdddata(@NotNull MyLangParser.AdddataContext ctx) { }
+	@Override public void exitGetname(@NotNull MyLangParser.GetnameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterGetdata(@NotNull MyLangParser.GetdataContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitGetdata(@NotNull MyLangParser.GetdataContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

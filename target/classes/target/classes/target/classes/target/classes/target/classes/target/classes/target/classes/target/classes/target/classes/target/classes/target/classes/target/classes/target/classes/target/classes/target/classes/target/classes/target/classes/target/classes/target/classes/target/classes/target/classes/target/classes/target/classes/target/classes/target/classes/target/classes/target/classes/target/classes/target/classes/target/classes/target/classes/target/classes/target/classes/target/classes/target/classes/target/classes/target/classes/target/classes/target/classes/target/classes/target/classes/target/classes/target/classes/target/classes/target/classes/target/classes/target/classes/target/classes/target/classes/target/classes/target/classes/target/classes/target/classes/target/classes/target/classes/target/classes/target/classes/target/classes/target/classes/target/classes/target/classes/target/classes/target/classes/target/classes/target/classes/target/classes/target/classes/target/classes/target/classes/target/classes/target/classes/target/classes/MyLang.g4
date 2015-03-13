@@ -1,36 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 grammar MyLang;
 
-
-expr    :  definechart
+@header {
+import org.jfree.chart.ChartUtilities;
+import org.jfree.chart.ChartFactory;
+}
+sttmnt returns [Chart result]
+        : CHARTS {$result = new Chart;}
+        ;
+expr    returns [String result]
+        : VARNAME {$result = (new Chart($VARNAME.text)).toString();}
         ;
 
 
-definchart returns [JFreeChart chartmodel]
-        : VARNAME ASSIGNMENT CHARTS {$result = new Chart($ASSIGNMENT.text)}
-        ;
+
 
 CHARTS  : 'pie'
-        | 'line';
+        | 'line'
+        ;
 
 VARNAME : [a-zA-z]+;
-TYPE    : '[a-zA-z]+';
-MULT    : '*' ;
-DIV     : '/' ;
-PLUS    : '+' ;
-MINUS   : '-' ;
+
+NUM     : DIGIT+ ;
+fragment DIGIT : [0-9] ;
+
 ASSIGNMENT : ':=';
-
-DIGIT   : [0-9]
-        ;
-
-NUM     : DIGIT+
-        ;
-
-
-WS      : [\s\t\r\n]+ -> skip ;

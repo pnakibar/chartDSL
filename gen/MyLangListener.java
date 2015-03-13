@@ -3,6 +3,7 @@ package gen;
 
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.ChartFactory;
+import org.jfree.chart.JFreeChart;
 
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
@@ -23,15 +24,25 @@ public interface MyLangListener extends ParseTreeListener {
 	 */
 	void exitExpr(@NotNull MyLangParser.ExprContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MyLangParser#adddata}.
+	 * Enter a parse tree produced by {@link MyLangParser#getname}.
 	 * @param ctx the parse tree
 	 */
-	void enterAdddata(@NotNull MyLangParser.AdddataContext ctx);
+	void enterGetname(@NotNull MyLangParser.GetnameContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MyLangParser#adddata}.
+	 * Exit a parse tree produced by {@link MyLangParser#getname}.
 	 * @param ctx the parse tree
 	 */
-	void exitAdddata(@NotNull MyLangParser.AdddataContext ctx);
+	void exitGetname(@NotNull MyLangParser.GetnameContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link MyLangParser#getdata}.
+	 * @param ctx the parse tree
+	 */
+	void enterGetdata(@NotNull MyLangParser.GetdataContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MyLangParser#getdata}.
+	 * @param ctx the parse tree
+	 */
+	void exitGetdata(@NotNull MyLangParser.GetdataContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link MyLangParser#piedata}.
 	 * @param ctx the parse tree

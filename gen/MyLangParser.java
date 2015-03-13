@@ -3,6 +3,7 @@ package gen;
 
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.ChartFactory;
+import org.jfree.chart.JFreeChart;
 
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
@@ -22,20 +23,22 @@ public class MyLangParser extends Parser {
 		new PredictionContextCache();
 	public static final int
 		PIE=1, CHART=2, COMMA=3, DOTCOMMA=4, END=5, LPAR=6, RPAR=7, LBR=8, RBR=9, 
-		TWP=10, NUM=11, VARNAME=12, ASSIGNMENT=13, WS=14;
+		TWP=10, WINDOW=11, JPG=12, PNG=13, NUM=14, VARNAME=15, ASSIGNMENT=16, 
+		WS=17;
 	public static final int
-		RULE_expr = 0, RULE_adddata = 1, RULE_piedata = 2, RULE_chartdata = 3;
+		RULE_expr = 0, RULE_getname = 1, RULE_getdata = 2, RULE_piedata = 3, RULE_chartdata = 4;
 	public static final String[] ruleNames = {
-		"expr", "adddata", "piedata", "chartdata"
+		"expr", "getname", "getdata", "piedata", "chartdata"
 	};
 
 	private static final String[] _LITERAL_NAMES = {
 		null, "'pie'", "'chart'", "','", "';'", "'end'", "'('", "')'", "'{'", 
-		"'}'", "':'", null, null, "':='"
+		"'}'", "':'", "'window'", "'jpg'", "'png'", null, null, "':='"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
 		null, "PIE", "CHART", "COMMA", "DOTCOMMA", "END", "LPAR", "RPAR", "LBR", 
-		"RBR", "TWP", "NUM", "VARNAME", "ASSIGNMENT", "WS"
+		"RBR", "TWP", "WINDOW", "JPG", "PNG", "NUM", "VARNAME", "ASSIGNMENT", 
+		"WS"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
@@ -87,10 +90,14 @@ public class MyLangParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 	public static class ExprContext extends ParserRuleContext {
-		public Data result;
-		public AdddataContext adddata;
-		public AdddataContext adddata() {
-			return getRuleContext(AdddataContext.class,0);
+		public JFreeChart result;
+		public GetnameContext getname;
+		public GetdataContext getdata;
+		public GetnameContext getname() {
+			return getRuleContext(GetnameContext.class,0);
+		}
+		public GetdataContext getdata() {
+			return getRuleContext(GetdataContext.class,0);
 		}
 		public ExprContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -112,9 +119,11 @@ public class MyLangParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(8); 
-			((ExprContext)_localctx).adddata = adddata();
-			((ExprContext)_localctx).result =  ((ExprContext)_localctx).adddata.result;
+			setState(10); 
+			((ExprContext)_localctx).getname = getname();
+			setState(11); 
+			((ExprContext)_localctx).getdata = getdata();
+			((ExprContext)_localctx).result =  (((ExprContext)_localctx).getdata.result).createChart(((ExprContext)_localctx).getname.name);
 			}
 		}
 		catch (RecognitionException re) {
@@ -128,7 +137,50 @@ public class MyLangParser extends Parser {
 		return _localctx;
 	}
 
-	public static class AdddataContext extends ParserRuleContext {
+	public static class GetnameContext extends ParserRuleContext {
+		public String name;
+		public Token VARNAME;
+		public TerminalNode VARNAME() { return getToken(MyLangParser.VARNAME, 0); }
+		public TerminalNode TWP() { return getToken(MyLangParser.TWP, 0); }
+		public GetnameContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_getname; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MyLangListener ) ((MyLangListener)listener).enterGetname(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MyLangListener ) ((MyLangListener)listener).exitGetname(this);
+		}
+	}
+
+	public final GetnameContext getname() throws RecognitionException {
+		GetnameContext _localctx = new GetnameContext(_ctx, getState());
+		enterRule(_localctx, 2, RULE_getname);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(14); 
+			((GetnameContext)_localctx).VARNAME = match(VARNAME);
+			setState(15); 
+			match(TWP);
+			((GetnameContext)_localctx).name =  (((GetnameContext)_localctx).VARNAME!=null?((GetnameContext)_localctx).VARNAME.getText():null);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class GetdataContext extends ParserRuleContext {
 		public Data result;
 		public PiedataContext piedata;
 		public ChartdataContext chartdata;
@@ -140,44 +192,44 @@ public class MyLangParser extends Parser {
 		public ChartdataContext chartdata() {
 			return getRuleContext(ChartdataContext.class,0);
 		}
-		public AdddataContext(ParserRuleContext parent, int invokingState) {
+		public GetdataContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_adddata; }
+		@Override public int getRuleIndex() { return RULE_getdata; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MyLangListener ) ((MyLangListener)listener).enterAdddata(this);
+			if ( listener instanceof MyLangListener ) ((MyLangListener)listener).enterGetdata(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MyLangListener ) ((MyLangListener)listener).exitAdddata(this);
+			if ( listener instanceof MyLangListener ) ((MyLangListener)listener).exitGetdata(this);
 		}
 	}
 
-	public final AdddataContext adddata() throws RecognitionException {
-		AdddataContext _localctx = new AdddataContext(_ctx, getState());
-		enterRule(_localctx, 2, RULE_adddata);
+	public final GetdataContext getdata() throws RecognitionException {
+		GetdataContext _localctx = new GetdataContext(_ctx, getState());
+		enterRule(_localctx, 4, RULE_getdata);
 		try {
-			setState(19);
+			setState(26);
 			switch (_input.LA(1)) {
 			case PIE:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(11); 
+				setState(18); 
 				match(PIE);
-				setState(12); 
-				((AdddataContext)_localctx).piedata = piedata();
-				((AdddataContext)_localctx).result =  ((AdddataContext)_localctx).piedata.result;
+				setState(19); 
+				((GetdataContext)_localctx).piedata = piedata();
+				((GetdataContext)_localctx).result =  ((GetdataContext)_localctx).piedata.result;
 				}
 				break;
 			case CHART:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(15); 
+				setState(22); 
 				match(CHART);
-				setState(16); 
-				((AdddataContext)_localctx).chartdata = chartdata();
-				((AdddataContext)_localctx).result =  ((AdddataContext)_localctx).chartdata.result;
+				setState(23); 
+				((GetdataContext)_localctx).chartdata = chartdata();
+				((GetdataContext)_localctx).result =  ((GetdataContext)_localctx).chartdata.result;
 				}
 				break;
 			default:
@@ -233,7 +285,7 @@ public class MyLangParser extends Parser {
 
 	public final PiedataContext piedata() throws RecognitionException {
 		PiedataContext _localctx = new PiedataContext(_ctx, getState());
-		enterRule(_localctx, 4, RULE_piedata);
+		enterRule(_localctx, 6, RULE_piedata);
 
 		        Data data = DataFactory.fabricate("pie");
 		        
@@ -241,37 +293,37 @@ public class MyLangParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(21); 
+			setState(28); 
 			match(LBR);
-			setState(22); 
+			setState(29); 
 			((PiedataContext)_localctx).column = match(VARNAME);
-			setState(23); 
+			setState(30); 
 			match(TWP);
-			setState(24); 
+			setState(31); 
 			((PiedataContext)_localctx).value = match(NUM);
 			data.add((((PiedataContext)_localctx).column!=null?((PiedataContext)_localctx).column.getText():null), (((PiedataContext)_localctx).value!=null?((PiedataContext)_localctx).value.getText():null));
-			setState(33);
+			setState(40);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==COMMA) {
 				{
 				{
-				setState(26); 
+				setState(33); 
 				match(COMMA);
-				setState(27); 
+				setState(34); 
 				((PiedataContext)_localctx).column = match(VARNAME);
-				setState(28); 
+				setState(35); 
 				match(TWP);
-				setState(29); 
+				setState(36); 
 				((PiedataContext)_localctx).value = match(NUM);
 				data.add((((PiedataContext)_localctx).column!=null?((PiedataContext)_localctx).column.getText():null), (((PiedataContext)_localctx).value!=null?((PiedataContext)_localctx).value.getText():null));
 				}
 				}
-				setState(35);
+				setState(42);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(36); 
+			setState(43); 
 			match(RBR);
 			((PiedataContext)_localctx).result =  data;
 			}
@@ -326,7 +378,7 @@ public class MyLangParser extends Parser {
 
 	public final ChartdataContext chartdata() throws RecognitionException {
 		ChartdataContext _localctx = new ChartdataContext(_ctx, getState());
-		enterRule(_localctx, 6, RULE_chartdata);
+		enterRule(_localctx, 8, RULE_chartdata);
 
 		        Data data = DataFactory.fabricate("chart");
 		        
@@ -334,45 +386,45 @@ public class MyLangParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(39); 
+			setState(46); 
 			match(LBR);
-			setState(40); 
+			setState(47); 
 			((ChartdataContext)_localctx).column = match(VARNAME);
-			setState(41); 
+			setState(48); 
 			match(TWP);
-			setState(42); 
+			setState(49); 
 			((ChartdataContext)_localctx).line = match(VARNAME);
-			setState(43); 
+			setState(50); 
 			match(TWP);
-			setState(44); 
+			setState(51); 
 			((ChartdataContext)_localctx).value = match(NUM);
 			data.add((((ChartdataContext)_localctx).column!=null?((ChartdataContext)_localctx).column.getText():null), (((ChartdataContext)_localctx).line!=null?((ChartdataContext)_localctx).line.getText():null), (((ChartdataContext)_localctx).value!=null?((ChartdataContext)_localctx).value.getText():null));
-			setState(55);
+			setState(62);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==COMMA) {
 				{
 				{
-				setState(46); 
+				setState(53); 
 				match(COMMA);
-				setState(47); 
+				setState(54); 
 				((ChartdataContext)_localctx).column = match(VARNAME);
-				setState(48); 
+				setState(55); 
 				match(TWP);
-				setState(49); 
+				setState(56); 
 				((ChartdataContext)_localctx).line = match(VARNAME);
-				setState(50); 
+				setState(57); 
 				match(TWP);
-				setState(51); 
+				setState(58); 
 				((ChartdataContext)_localctx).value = match(NUM);
 				data.add((((ChartdataContext)_localctx).column!=null?((ChartdataContext)_localctx).column.getText():null), (((ChartdataContext)_localctx).line!=null?((ChartdataContext)_localctx).line.getText():null), (((ChartdataContext)_localctx).value!=null?((ChartdataContext)_localctx).value.getText():null));
 				}
 				}
-				setState(57);
+				setState(64);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(58); 
+			setState(65); 
 			match(RBR);
 			((ChartdataContext)_localctx).result =  data;
 			}
@@ -389,22 +441,23 @@ public class MyLangParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\20@\4\2\t\2\4\3\t"+
-		"\3\4\4\t\4\4\5\t\5\3\2\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\5\3\26"+
-		"\n\3\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\7\4\"\n\4\f\4\16\4%\13\4"+
-		"\3\4\3\4\3\4\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\7"+
-		"\58\n\5\f\5\16\5;\13\5\3\5\3\5\3\5\3\5\2\2\6\2\4\6\b\2\2>\2\n\3\2\2\2"+
-		"\4\25\3\2\2\2\6\27\3\2\2\2\b)\3\2\2\2\n\13\5\4\3\2\13\f\b\2\1\2\f\3\3"+
-		"\2\2\2\r\16\7\3\2\2\16\17\5\6\4\2\17\20\b\3\1\2\20\26\3\2\2\2\21\22\7"+
-		"\4\2\2\22\23\5\b\5\2\23\24\b\3\1\2\24\26\3\2\2\2\25\r\3\2\2\2\25\21\3"+
-		"\2\2\2\26\5\3\2\2\2\27\30\7\n\2\2\30\31\7\16\2\2\31\32\7\f\2\2\32\33\7"+
-		"\r\2\2\33#\b\4\1\2\34\35\7\5\2\2\35\36\7\16\2\2\36\37\7\f\2\2\37 \7\r"+
-		"\2\2 \"\b\4\1\2!\34\3\2\2\2\"%\3\2\2\2#!\3\2\2\2#$\3\2\2\2$&\3\2\2\2%"+
-		"#\3\2\2\2&\'\7\13\2\2\'(\b\4\1\2(\7\3\2\2\2)*\7\n\2\2*+\7\16\2\2+,\7\f"+
-		"\2\2,-\7\16\2\2-.\7\f\2\2./\7\r\2\2/9\b\5\1\2\60\61\7\5\2\2\61\62\7\16"+
-		"\2\2\62\63\7\f\2\2\63\64\7\16\2\2\64\65\7\f\2\2\65\66\7\r\2\2\668\b\5"+
-		"\1\2\67\60\3\2\2\28;\3\2\2\29\67\3\2\2\29:\3\2\2\2:<\3\2\2\2;9\3\2\2\2"+
-		"<=\7\13\2\2=>\b\5\1\2>\t\3\2\2\2\5\25#9";
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\23G\4\2\t\2\4\3\t"+
+		"\3\4\4\t\4\4\5\t\5\4\6\t\6\3\2\3\2\3\2\3\2\3\3\3\3\3\3\3\3\3\4\3\4\3\4"+
+		"\3\4\3\4\3\4\3\4\3\4\5\4\35\n\4\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3"+
+		"\5\7\5)\n\5\f\5\16\5,\13\5\3\5\3\5\3\5\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6"+
+		"\3\6\3\6\3\6\3\6\3\6\3\6\7\6?\n\6\f\6\16\6B\13\6\3\6\3\6\3\6\3\6\2\2\7"+
+		"\2\4\6\b\n\2\2D\2\f\3\2\2\2\4\20\3\2\2\2\6\34\3\2\2\2\b\36\3\2\2\2\n\60"+
+		"\3\2\2\2\f\r\5\4\3\2\r\16\5\6\4\2\16\17\b\2\1\2\17\3\3\2\2\2\20\21\7\21"+
+		"\2\2\21\22\7\f\2\2\22\23\b\3\1\2\23\5\3\2\2\2\24\25\7\3\2\2\25\26\5\b"+
+		"\5\2\26\27\b\4\1\2\27\35\3\2\2\2\30\31\7\4\2\2\31\32\5\n\6\2\32\33\b\4"+
+		"\1\2\33\35\3\2\2\2\34\24\3\2\2\2\34\30\3\2\2\2\35\7\3\2\2\2\36\37\7\n"+
+		"\2\2\37 \7\21\2\2 !\7\f\2\2!\"\7\20\2\2\"*\b\5\1\2#$\7\5\2\2$%\7\21\2"+
+		"\2%&\7\f\2\2&\'\7\20\2\2\')\b\5\1\2(#\3\2\2\2),\3\2\2\2*(\3\2\2\2*+\3"+
+		"\2\2\2+-\3\2\2\2,*\3\2\2\2-.\7\13\2\2./\b\5\1\2/\t\3\2\2\2\60\61\7\n\2"+
+		"\2\61\62\7\21\2\2\62\63\7\f\2\2\63\64\7\21\2\2\64\65\7\f\2\2\65\66\7\20"+
+		"\2\2\66@\b\6\1\2\678\7\5\2\289\7\21\2\29:\7\f\2\2:;\7\21\2\2;<\7\f\2\2"+
+		"<=\7\20\2\2=?\b\6\1\2>\67\3\2\2\2?B\3\2\2\2@>\3\2\2\2@A\3\2\2\2AC\3\2"+
+		"\2\2B@\3\2\2\2CD\7\13\2\2DE\b\6\1\2E\13\3\2\2\2\5\34*@";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

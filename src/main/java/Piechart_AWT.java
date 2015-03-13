@@ -26,6 +26,7 @@ public class Piechart_AWT extends ApplicationFrame
         dataset.setValue( "Nokia Lumia" , new Double( 10 ) );
         return dataset;
     }
+
     private static JFreeChart createChart( PieDataset dataset )
     {
         JFreeChart chart = ChartFactory.createPieChart(
