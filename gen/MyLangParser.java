@@ -23,8 +23,8 @@ public class MyLangParser extends Parser {
 		new PredictionContextCache();
 	public static final int
 		PIE=1, CHART=2, COMMA=3, DOTCOMMA=4, END=5, LPAR=6, RPAR=7, LBR=8, RBR=9, 
-		TWP=10, X=11, SHOWAS=12, WINDOW=13, JPEG=14, PNG=15, NUM=16, VARNAME=17, 
-		ASSIGNMENT=18, WS=19;
+		TWP=10, X=11, CRUNCH=12, SHOWAS=13, WINDOW=14, JPEG=15, PNG=16, NUM=17, 
+		VARNAME=18, ASSIGNMENT=19, WS=20;
 	public static final int
 		RULE_expr = 0, RULE_getShowAs = 1, RULE_showAsWindow = 2, RULE_showAsPNG = 3, 
 		RULE_showAsJPEG = 4, RULE_getname = 5, RULE_getdata = 6, RULE_piedata = 7, 
@@ -36,13 +36,13 @@ public class MyLangParser extends Parser {
 
 	private static final String[] _LITERAL_NAMES = {
 		null, "'pie'", "'chart'", "','", "';'", "'end'", "'('", "')'", "'{'", 
-		"'}'", "':'", "'x'", "'show as'", "'window'", "'jpeg'", "'png'", null, 
-		null, "':='"
+		"'}'", "':'", "'x'", "'#'", "'show as'", "'window'", "'jpeg'", "'png'", 
+		null, null, "':='"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
 		null, "PIE", "CHART", "COMMA", "DOTCOMMA", "END", "LPAR", "RPAR", "LBR", 
-		"RBR", "TWP", "X", "SHOWAS", "WINDOW", "JPEG", "PNG", "NUM", "VARNAME", 
-		"ASSIGNMENT", "WS"
+		"RBR", "TWP", "X", "CRUNCH", "SHOWAS", "WINDOW", "JPEG", "PNG", "NUM", 
+		"VARNAME", "ASSIGNMENT", "WS"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
@@ -606,10 +606,16 @@ public class MyLangParser extends Parser {
 		public Token column;
 		public Token line;
 		public Token value;
+		public Token domainLabel;
+		public Token rangeLabel;
 		public TerminalNode LBR() { return getToken(MyLangParser.LBR, 0); }
 		public List<TerminalNode> TWP() { return getTokens(MyLangParser.TWP); }
 		public TerminalNode TWP(int i) {
 			return getToken(MyLangParser.TWP, i);
+		}
+		public List<TerminalNode> CRUNCH() { return getTokens(MyLangParser.CRUNCH); }
+		public TerminalNode CRUNCH(int i) {
+			return getToken(MyLangParser.CRUNCH, i);
 		}
 		public TerminalNode RBR() { return getToken(MyLangParser.RBR, 0); }
 		public List<TerminalNode> VARNAME() { return getTokens(MyLangParser.VARNAME); }
@@ -687,6 +693,16 @@ public class MyLangParser extends Parser {
 				_la = _input.LA(1);
 			}
 			setState(111); 
+			match(CRUNCH);
+			setState(112); 
+			((ChartdataContext)_localctx).domainLabel = match(VARNAME);
+			data.add("domainLabel", (((ChartdataContext)_localctx).domainLabel!=null?((ChartdataContext)_localctx).domainLabel.getText():null));
+			setState(114); 
+			match(CRUNCH);
+			setState(115); 
+			((ChartdataContext)_localctx).rangeLabel = match(VARNAME);
+			data.add("rangeLabel", (((ChartdataContext)_localctx).rangeLabel!=null?((ChartdataContext)_localctx).rangeLabel.getText():null));
+			setState(117); 
 			match(RBR);
 			((ChartdataContext)_localctx).result =  data;
 			}
@@ -703,32 +719,34 @@ public class MyLangParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\25u\4\2\t\2\4\3\t"+
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\26{\4\2\t\2\4\3\t"+
 		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\3\2\3\2\3\2"+
 		"\3\2\3\2\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\5\3("+
 		"\n\3\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\6\3\6\3"+
 		"\6\3\6\3\6\3\6\3\6\3\7\3\7\3\7\3\7\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\5\b"+
 		"K\n\b\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\7\tW\n\t\f\t\16\tZ\13\t"+
 		"\3\t\3\t\3\t\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\7"+
-		"\nm\n\n\f\n\16\np\13\n\3\n\3\n\3\n\3\n\2\2\13\2\4\6\b\n\f\16\20\22\2\2"+
-		"p\2\24\3\2\2\2\4\'\3\2\2\2\6)\3\2\2\2\b\60\3\2\2\2\n\67\3\2\2\2\f>\3\2"+
-		"\2\2\16J\3\2\2\2\20L\3\2\2\2\22^\3\2\2\2\24\25\5\f\7\2\25\26\7\16\2\2"+
-		"\26\27\5\4\3\2\27\30\7\f\2\2\30\31\5\16\b\2\31\32\b\2\1\2\32\3\3\2\2\2"+
-		"\33\34\7\21\2\2\34\35\5\b\5\2\35\36\b\3\1\2\36(\3\2\2\2\37 \7\20\2\2 "+
-		"!\5\n\6\2!\"\b\3\1\2\"(\3\2\2\2#$\7\17\2\2$%\5\6\4\2%&\b\3\1\2&(\3\2\2"+
-		"\2\'\33\3\2\2\2\'\37\3\2\2\2\'#\3\2\2\2(\5\3\2\2\2)*\7\b\2\2*+\7\22\2"+
-		"\2+,\7\r\2\2,-\7\22\2\2-.\7\t\2\2./\b\4\1\2/\7\3\2\2\2\60\61\7\b\2\2\61"+
-		"\62\7\22\2\2\62\63\7\r\2\2\63\64\7\22\2\2\64\65\7\t\2\2\65\66\b\5\1\2"+
-		"\66\t\3\2\2\2\678\7\b\2\289\7\22\2\29:\7\r\2\2:;\7\22\2\2;<\7\t\2\2<="+
-		"\b\6\1\2=\13\3\2\2\2>?\7\23\2\2?@\7\f\2\2@A\b\7\1\2A\r\3\2\2\2BC\7\3\2"+
-		"\2CD\5\20\t\2DE\b\b\1\2EK\3\2\2\2FG\7\4\2\2GH\5\22\n\2HI\b\b\1\2IK\3\2"+
-		"\2\2JB\3\2\2\2JF\3\2\2\2K\17\3\2\2\2LM\7\n\2\2MN\7\23\2\2NO\7\f\2\2OP"+
-		"\7\22\2\2PX\b\t\1\2QR\7\5\2\2RS\7\23\2\2ST\7\f\2\2TU\7\22\2\2UW\b\t\1"+
-		"\2VQ\3\2\2\2WZ\3\2\2\2XV\3\2\2\2XY\3\2\2\2Y[\3\2\2\2ZX\3\2\2\2[\\\7\13"+
-		"\2\2\\]\b\t\1\2]\21\3\2\2\2^_\7\n\2\2_`\7\23\2\2`a\7\f\2\2ab\7\23\2\2"+
-		"bc\7\f\2\2cd\7\22\2\2dn\b\n\1\2ef\7\5\2\2fg\7\23\2\2gh\7\f\2\2hi\7\23"+
-		"\2\2ij\7\f\2\2jk\7\22\2\2km\b\n\1\2le\3\2\2\2mp\3\2\2\2nl\3\2\2\2no\3"+
-		"\2\2\2oq\3\2\2\2pn\3\2\2\2qr\7\13\2\2rs\b\n\1\2s\23\3\2\2\2\6\'JXn";
+		"\nm\n\n\f\n\16\np\13\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\2\2\13"+
+		"\2\4\6\b\n\f\16\20\22\2\2v\2\24\3\2\2\2\4\'\3\2\2\2\6)\3\2\2\2\b\60\3"+
+		"\2\2\2\n\67\3\2\2\2\f>\3\2\2\2\16J\3\2\2\2\20L\3\2\2\2\22^\3\2\2\2\24"+
+		"\25\5\f\7\2\25\26\7\17\2\2\26\27\5\4\3\2\27\30\7\f\2\2\30\31\5\16\b\2"+
+		"\31\32\b\2\1\2\32\3\3\2\2\2\33\34\7\22\2\2\34\35\5\b\5\2\35\36\b\3\1\2"+
+		"\36(\3\2\2\2\37 \7\21\2\2 !\5\n\6\2!\"\b\3\1\2\"(\3\2\2\2#$\7\20\2\2$"+
+		"%\5\6\4\2%&\b\3\1\2&(\3\2\2\2\'\33\3\2\2\2\'\37\3\2\2\2\'#\3\2\2\2(\5"+
+		"\3\2\2\2)*\7\b\2\2*+\7\23\2\2+,\7\r\2\2,-\7\23\2\2-.\7\t\2\2./\b\4\1\2"+
+		"/\7\3\2\2\2\60\61\7\b\2\2\61\62\7\23\2\2\62\63\7\r\2\2\63\64\7\23\2\2"+
+		"\64\65\7\t\2\2\65\66\b\5\1\2\66\t\3\2\2\2\678\7\b\2\289\7\23\2\29:\7\r"+
+		"\2\2:;\7\23\2\2;<\7\t\2\2<=\b\6\1\2=\13\3\2\2\2>?\7\24\2\2?@\7\f\2\2@"+
+		"A\b\7\1\2A\r\3\2\2\2BC\7\3\2\2CD\5\20\t\2DE\b\b\1\2EK\3\2\2\2FG\7\4\2"+
+		"\2GH\5\22\n\2HI\b\b\1\2IK\3\2\2\2JB\3\2\2\2JF\3\2\2\2K\17\3\2\2\2LM\7"+
+		"\n\2\2MN\7\24\2\2NO\7\f\2\2OP\7\23\2\2PX\b\t\1\2QR\7\5\2\2RS\7\24\2\2"+
+		"ST\7\f\2\2TU\7\23\2\2UW\b\t\1\2VQ\3\2\2\2WZ\3\2\2\2XV\3\2\2\2XY\3\2\2"+
+		"\2Y[\3\2\2\2ZX\3\2\2\2[\\\7\13\2\2\\]\b\t\1\2]\21\3\2\2\2^_\7\n\2\2_`"+
+		"\7\24\2\2`a\7\f\2\2ab\7\24\2\2bc\7\f\2\2cd\7\23\2\2dn\b\n\1\2ef\7\5\2"+
+		"\2fg\7\24\2\2gh\7\f\2\2hi\7\24\2\2ij\7\f\2\2jk\7\23\2\2km\b\n\1\2le\3"+
+		"\2\2\2mp\3\2\2\2nl\3\2\2\2no\3\2\2\2oq\3\2\2\2pn\3\2\2\2qr\7\16\2\2rs"+
+		"\7\24\2\2st\b\n\1\2tu\7\16\2\2uv\7\24\2\2vw\b\n\1\2wx\7\13\2\2xy\b\n\1"+
+		"\2y\23\3\2\2\2\6\'JXn";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

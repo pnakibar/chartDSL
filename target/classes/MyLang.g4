@@ -53,6 +53,8 @@ chartdata returns [Data result]
         LBR
             column=VARNAME TWP line=VARNAME TWP value=NUM {data.add($column.text, $line.text, $value.text);}
             (COMMA column=VARNAME TWP line=VARNAME TWP value=NUM {data.add($column.text, $line.text, $value.text);})*
+            CRUNCH domainLabel=VARNAME   {data.add("domainLabel", $domainLabel.text);}
+            CRUNCH rangeLabel =VARNAME   {data.add("rangeLabel", $rangeLabel.text);}
         RBR {$result = data;}
     ;
 
@@ -69,6 +71,7 @@ LBR     : '{';
 RBR     : '}';
 TWP     : ':';
 X : 'x';
+CRUNCH : '#';
 
 SHOWAS : 'show as';
 WINDOW  : 'window';
