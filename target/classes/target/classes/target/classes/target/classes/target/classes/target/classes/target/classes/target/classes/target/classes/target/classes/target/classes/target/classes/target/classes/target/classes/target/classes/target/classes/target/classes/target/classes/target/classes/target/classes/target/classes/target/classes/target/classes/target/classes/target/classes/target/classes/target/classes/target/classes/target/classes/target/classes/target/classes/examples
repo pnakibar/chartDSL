@@ -1,16 +1,22 @@
-chart{
+//current state
+name:chart{
     apple:qq:3,
     microsoft:qq:4
 }
 
-pie{
+name:pie{
     apple:4,
     microsoft:5
 }
 
-chart:
-show as %png(%width x %height) in %directory
-pie{
+//the objective
+name:show as %png(%width x %height) as a %pie{
+    apple:4,
+    microsoft:5
+}
+
+//the objective
+name:show as %window as a %pie{
     apple:4,
     microsoft:5
 }

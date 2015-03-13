@@ -18,7 +18,7 @@ public class Testing {
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         MyLangParser parser = new MyLangParser(tokens);
         MyLangParser.ExprContext ctx = parser.expr();
-        System.out.printf(">>> %s\n", ctx.result);
+        //System.out.printf(">>> %s\n", ctx.result);
 
 
     }

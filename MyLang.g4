@@ -13,16 +13,17 @@ expr
 getShowAs returns [Save result]
         :PNG showAsPNG {$result = $showAsPNG.result;}
         |JPEG showAsJPEG {$result = $showAsJPEG.result;}
-        //TODO: WINDOW view
+        |WINDOW showAsWindow {$result = $showAsWindow.result;}
         ;
-
+showAsWindow returns [Save result]
+        :LPAR height=NUM X width=NUM RPAR {$result = new SaveWindow($height.text, $width.text);}
+        ;
 showAsPNG returns [Save result]
         :LPAR height=NUM X width=NUM RPAR {$result = new SavePNG($height.text, $width.text);}
         ;
 showAsJPEG returns [Save result]
         :LPAR height=NUM X width=NUM RPAR {$result = new SaveJPEG($height.text, $width.text);}
         ;
-
 
 getname returns [String result]
         :VARNAME TWP {$result = $VARNAME.text;}
@@ -43,7 +44,7 @@ piedata returns [Data result]
             (COMMA column=VARNAME TWP value=NUM {data.add($column.text, $value.text);})*
         RBR {$result = data;}
     ;
-
+//TODO: Informações da tabela 'chart', não está exibindo as da tabela e superiores
 chartdata returns [Data result]
 @init   {
         Data data = DataFactory.fabricate("chart");

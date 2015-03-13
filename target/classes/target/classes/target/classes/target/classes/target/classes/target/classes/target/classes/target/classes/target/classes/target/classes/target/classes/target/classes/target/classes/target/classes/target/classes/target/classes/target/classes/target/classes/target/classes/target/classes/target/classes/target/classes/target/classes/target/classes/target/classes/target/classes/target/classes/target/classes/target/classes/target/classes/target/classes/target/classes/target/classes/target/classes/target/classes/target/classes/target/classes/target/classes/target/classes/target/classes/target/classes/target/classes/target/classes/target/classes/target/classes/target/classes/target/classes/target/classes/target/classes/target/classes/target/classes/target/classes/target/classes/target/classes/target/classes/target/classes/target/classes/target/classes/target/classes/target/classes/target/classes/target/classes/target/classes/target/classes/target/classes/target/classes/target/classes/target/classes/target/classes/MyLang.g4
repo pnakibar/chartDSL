@@ -10,8 +10,8 @@ expr returns [Data result]
 
 
 adddata returns [Data result]
-        :piedata {$result = $piedata.result;}
-        /*|CHART chartdata {$result = chartdata.result;}*/
+        : PIE piedata {$result = $piedata.result;}
+        | CHART chartdata {$result = $chartdata.result;}
         ;
 
 piedata returns [Data result]
@@ -31,8 +31,8 @@ chartdata returns [Data result]
         }
     :
         LBR
-            column=VARNAME TWP line=VARNAME TWP value=NUM {data.add($column.text, $line.text, $value.text);}
-            (COMMA column=VARNAME TWP line=VARNAME TWP value=NUM {data.add($column.text, $line.text, $value.text);})*
+            column=VARNAME TWP line=ALPHAN TWP value=NUM {data.add($column.text, $line.text, $value.text);}
+            (COMMA column=VARNAME TWP line=ALPHAN TWP value=NUM {data.add($column.text, $line.text, $value.text);})*
         RBR {$result = data;}
     ;
 
@@ -48,7 +48,7 @@ RBR     : '}';
 TWP     : ':';
 
 VARNAME : [a-zA-z]+;
-
+ALPHAN : [a-zA-Z0-9]+;
 NUM     : DIGIT+ ;
 fragment DIGIT : [0-9] ;
 

@@ -5,22 +5,19 @@ import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
 }
-/*
-expr returns [JFreeChart result]
-        :getname SHOWAS getshowas TWP getdata {$result = ($getdata.result).createChart($getname.name);}
-        ;
-*/
-expr returns [JFreeChart result]
-        //:getname SHOWAS getshowas TWP getdata {$result = ($getdata.result).createChart($getname.name);}
-        :getname SHOWAS getShowAs TWP getdata {$getShowAs.result.save($getname.result, ($getdata.result).createChart($getname.result));}
+
+expr
+        :getname SHOWAS getShowAs TWP getdata /*invoke Save.save*/{$getShowAs.result.save($getname.result, ($getdata.result).createChart($getname.result));}
         ;
 
 getShowAs returns [Save result]
         :PNG showAsPNG {$result = $showAsPNG.result;}
         |JPEG showAsJPEG {$result = $showAsJPEG.result;}
-        //TODO: WINDOW view
+        |WINDOW showAsWindow {$result = $showAsWindow.result;}
         ;
-
+showAsWindow returns [Save result]
+        :LPAR height=NUM X width=NUM RPAR {$result = new SaveWindow($height.text, $width.text);}
+        ;
 showAsPNG returns [Save result]
         :LPAR height=NUM X width=NUM RPAR {$result = new SavePNG($height.text, $width.text);}
         ;

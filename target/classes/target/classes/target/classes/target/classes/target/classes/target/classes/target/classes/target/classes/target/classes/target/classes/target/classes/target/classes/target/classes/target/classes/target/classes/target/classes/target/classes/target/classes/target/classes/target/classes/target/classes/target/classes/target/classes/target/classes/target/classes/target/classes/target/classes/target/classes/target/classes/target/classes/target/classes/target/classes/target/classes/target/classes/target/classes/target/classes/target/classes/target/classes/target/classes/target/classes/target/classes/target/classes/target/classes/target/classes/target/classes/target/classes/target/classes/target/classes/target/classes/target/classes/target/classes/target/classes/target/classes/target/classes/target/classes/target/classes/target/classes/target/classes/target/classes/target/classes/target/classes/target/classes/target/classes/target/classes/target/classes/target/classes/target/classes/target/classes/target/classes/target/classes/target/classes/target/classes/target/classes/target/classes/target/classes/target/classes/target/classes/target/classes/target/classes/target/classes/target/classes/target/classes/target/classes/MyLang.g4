@@ -5,22 +5,52 @@ import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.ChartFactory;
 }
 expr returns [Data result]
-        @init {
-               Data data = new Data();
-        }
-        : VARNAME ASSIGNMENT NUM ASSIGNMENTEND {data.add($VARNAME.text, $NUM.text);System.out.printf($VARNAME.text);}
-        | END {$result = data;}
+        :r = adddata {$result = $r.result;}
         ;
 
-CHARTS  : 'pie'
-        | 'line'
+
+adddata returns [Data result]
+        :piedata {$result = $piedata.result;}
+        /*|CHART chartdata {$result = chartdata.result;}*/
         ;
-ASSIGNMENTEND : ';';
+
+piedata returns [Data result]
+@init   {
+        Data data = DataFactory.fabricate("pie");
+        }
+    :
+        LBR
+            column=VARNAME TWP value=NUM {data.add($column.text, $value.text);}
+            (COMMA column=VARNAME TWP value=NUM {data.add($column.text, $value.text);})*
+        RBR {$result = data;}
+    ;
+
+chartdata returns [Data result]
+@init   {
+        Data data = DataFactory.fabricate("chart");
+        }
+    :
+        LBR
+            column=VARNAME TWP line=VARNAME TWP value=NUM {data.add($column.text, $line.text, $value.text);}
+            (COMMA column=VARNAME TWP line=VARNAME TWP value=NUM {data.add($column.text, $line.text, $value.text);})*
+        RBR {$result = data;}
+    ;
+
+PIE : 'pie';
+CHART : 'chart';
+COMMA   : ',';
+DOTCOMMA : ';';
 END : 'end';
+LPAR    : '(' ;
+RPAR    : ')' ;
+LBR     : '{';
+RBR     : '}';
+TWP     : ':';
+
 VARNAME : [a-zA-z]+;
 
 NUM     : DIGIT+ ;
 fragment DIGIT : [0-9] ;
 
 ASSIGNMENT : ':=';
-WS      : [ \t\r\n]+ -> skip ;
+WS      : [ \n]+ -> skip ;

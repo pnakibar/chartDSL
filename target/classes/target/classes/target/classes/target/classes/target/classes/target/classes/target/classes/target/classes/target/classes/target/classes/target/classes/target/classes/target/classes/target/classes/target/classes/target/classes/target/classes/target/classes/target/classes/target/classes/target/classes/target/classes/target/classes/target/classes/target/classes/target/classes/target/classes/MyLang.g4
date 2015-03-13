@@ -7,8 +7,22 @@ import org.jfree.chart.JFreeChart;
 }
 
 expr returns [JFreeChart result]
-        :getname getdata {$result = ($getdata.result).createChart($getname.name);}
+        :getname SHOWAS getshowas getdata {$result = ($getdata.result).createChart($getname.name);}
         ;
+
+getshowas returns [Save result]
+        :PNG showAsPNG {$result = $showAsPNG.result;}
+        |JPEG showAsJPEG {$result = $showAsJPEG.result;}
+        //TODO: WINDOW view
+        ;
+
+showAsPNG returns [Save result]
+        :LPAR height=NUM X width=NUM RPAR {System.out.printf($height.text);}/*{$result = new SavePNG($height.text, $width.text);}*/
+        ;
+showAsJPEG returns [Save result]
+        :LPAR height=NUM X width=NUM RPAR /*{$result = new SaveJPEG($height.text, $width.text);}*/
+        ;
+
 
 getname returns [String name]
         :VARNAME TWP {$name = $VARNAME.text;}
@@ -42,6 +56,7 @@ chartdata returns [Data result]
     ;
 
 
+
 PIE : 'pie';
 CHART : 'chart';
 COMMA   : ',';
@@ -52,9 +67,11 @@ RPAR    : ')' ;
 LBR     : '{';
 RBR     : '}';
 TWP     : ':';
+X : 'x';
 
+SHOWAS : 'show as';
 WINDOW  : 'window';
-JPG     : 'jpg';
+JPEG     : 'jpeg';
 PNG     : 'png';
 
 

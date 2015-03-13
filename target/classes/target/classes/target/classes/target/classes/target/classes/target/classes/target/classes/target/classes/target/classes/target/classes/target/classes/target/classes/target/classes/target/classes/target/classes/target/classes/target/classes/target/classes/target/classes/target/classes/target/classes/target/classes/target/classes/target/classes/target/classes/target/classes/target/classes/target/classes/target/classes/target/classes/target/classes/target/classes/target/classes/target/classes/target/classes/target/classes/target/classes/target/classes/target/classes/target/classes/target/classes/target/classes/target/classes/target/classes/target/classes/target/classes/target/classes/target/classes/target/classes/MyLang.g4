@@ -4,9 +4,11 @@ grammar MyLang;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.ChartFactory;
 }
+
 expr returns [Data result]
-        :r = adddata {$result = $r.result;}
+        :getname adddata {$result = $adddata.result;}
         ;
+
 
 
 adddata returns [Data result]
@@ -31,8 +33,8 @@ chartdata returns [Data result]
         }
     :
         LBR
-            column=VARNAME TWP line=ID TWP value=NUM {data.add($column.text, $line.text, $value.text);}
-            (COMMA column=ID TWP line=ID TWP value=NUM {data.add($column.text, $line.text, $value.text);})*
+            column=VARNAME TWP line=VARNAME TWP value=NUM {data.add($column.text, $line.text, $value.text);}
+            (COMMA column=VARNAME TWP line=VARNAME TWP value=NUM {data.add($column.text, $line.text, $value.text);})*
         RBR {$result = data;}
     ;
 
@@ -53,7 +55,6 @@ fragment DIGIT : [0-9] ;
 fragment ALPHA : [_a-zA-Z] ;
 NUM     : DIGIT+ ;
 VARNAME : ALPHA+;
-ID      : ALPHA (ALPHA | DIGIT)* ;
 
 ASSIGNMENT : ':=';
 

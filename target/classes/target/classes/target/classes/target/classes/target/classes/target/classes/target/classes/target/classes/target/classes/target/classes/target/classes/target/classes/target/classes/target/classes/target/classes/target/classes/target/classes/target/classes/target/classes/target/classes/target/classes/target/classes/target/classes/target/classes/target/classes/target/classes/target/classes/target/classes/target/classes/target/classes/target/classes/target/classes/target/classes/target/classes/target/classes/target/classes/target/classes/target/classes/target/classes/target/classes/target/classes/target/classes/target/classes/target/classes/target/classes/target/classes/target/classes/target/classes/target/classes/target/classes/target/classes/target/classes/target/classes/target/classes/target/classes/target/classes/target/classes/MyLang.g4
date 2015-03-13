@@ -11,7 +11,7 @@ expr returns [Data result]
 
 adddata returns [Data result]
         : PIE piedata {$result = $piedata.result;}
-        |CHART chartdata {$result = chartdata.result;}
+        | CHART chartdata {$result = $chartdata.result;}
         ;
 
 piedata returns [Data result]
@@ -36,6 +36,7 @@ chartdata returns [Data result]
         RBR {$result = data;}
     ;
 
+
 PIE : 'pie';
 CHART : 'chart';
 COMMA   : ',';
@@ -47,10 +48,12 @@ LBR     : '{';
 RBR     : '}';
 TWP     : ':';
 
-VARNAME : [a-zA-z]+;
 
-NUM     : DIGIT+ ;
 fragment DIGIT : [0-9] ;
+fragment ALPHA : [_a-zA-Z] ;
+NUM     : DIGIT+ ;
+VARNAME : ALPHA+;
 
 ASSIGNMENT : ':=';
+
 WS      : [ \n]+ -> skip ;

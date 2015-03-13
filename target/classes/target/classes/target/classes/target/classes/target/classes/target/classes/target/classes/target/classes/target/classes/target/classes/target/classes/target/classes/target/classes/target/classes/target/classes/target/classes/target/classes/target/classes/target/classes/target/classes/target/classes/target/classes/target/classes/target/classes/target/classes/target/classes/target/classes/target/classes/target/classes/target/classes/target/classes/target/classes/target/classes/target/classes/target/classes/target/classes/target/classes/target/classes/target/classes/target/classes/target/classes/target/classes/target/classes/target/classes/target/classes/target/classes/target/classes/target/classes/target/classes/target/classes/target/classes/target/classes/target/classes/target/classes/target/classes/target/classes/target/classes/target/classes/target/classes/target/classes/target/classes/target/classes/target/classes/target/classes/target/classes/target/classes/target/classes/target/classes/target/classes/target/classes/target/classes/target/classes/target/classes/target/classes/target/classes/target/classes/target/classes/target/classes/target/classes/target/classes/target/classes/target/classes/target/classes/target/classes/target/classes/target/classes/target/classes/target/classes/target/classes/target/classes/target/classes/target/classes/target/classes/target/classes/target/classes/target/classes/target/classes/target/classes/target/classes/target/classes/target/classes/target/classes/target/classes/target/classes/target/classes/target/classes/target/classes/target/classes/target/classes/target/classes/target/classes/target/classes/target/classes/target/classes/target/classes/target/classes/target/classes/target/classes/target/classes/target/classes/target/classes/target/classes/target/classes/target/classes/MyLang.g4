@@ -7,21 +7,24 @@
 grammar MyLang;
 
 
-expr    :   expr1 ((PLUS | MINUS) expr1)*
+expr    :  definechart
         ;
 
-expr1   :   expr2 ((MULT | DIV) expr2)*
+
+definchart returns [JFreeChart chartmodel]
+        : VARNAME ASSIGNMENT CHARTS {$result = new Chart($ASSIGNMENT.text)}
         ;
 
-expr2   : NUM
-        | '-' expr2
-        | '(' expr ')'
-        ;
+CHARTS  : 'pie'
+        | 'line';
 
+VARNAME : [a-zA-z]+;
+TYPE    : '[a-zA-z]+';
 MULT    : '*' ;
 DIV     : '/' ;
 PLUS    : '+' ;
 MINUS   : '-' ;
+ASSIGNMENT : ':=';
 
 DIGIT   : [0-9]
         ;
@@ -29,3 +32,5 @@ DIGIT   : [0-9]
 NUM     : DIGIT+
         ;
 
+
+WS      : [\s\t\r\n]+ -> skip ;

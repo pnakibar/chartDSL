@@ -6,26 +6,28 @@ import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
 }
 
-expr returns [JFreeChart result]
-        :getname SHOWAS getshowas getdata {$result = ($getdata.result).createChart($getname.name);}
+expr
+        :getname SHOWAS getShowAs TWP getdata /*invoke Save.save*/{$getShowAs.result.save($getname.result, ($getdata.result).createChart($getname.result));}
         ;
 
-getshowas returns [Save result]
+getShowAs returns [Save result]
         :PNG showAsPNG {$result = $showAsPNG.result;}
         |JPEG showAsJPEG {$result = $showAsJPEG.result;}
-        //TODO: WINDOW view
+        |WINDOW showAsWindow {$result = $showAsWindow.result;}
         ;
-
+showAsWindow returns [Save result]
+        :LPAR height=NUM X width=NUM RPAR {$result = new SaveWindow($height.text, $width.text);}
+        ;
 showAsPNG returns [Save result]
-        :LPAR height=NUM X width=NUM RPAR {System.out.printf($height.text);}/*{$result = new SavePNG($height.text, $width.text);}*/
+        :LPAR height=NUM X width=NUM RPAR {$result = new SavePNG($height.text, $width.text);}
         ;
 showAsJPEG returns [Save result]
-        :LPAR height=NUM X width=NUM RPAR /*{$result = new SaveJPEG($height.text, $width.text);}*/
+        :LPAR height=NUM X width=NUM RPAR {$result = new SaveJPEG($height.text, $width.text);}
         ;
 
 
-getname returns [String name]
-        :VARNAME TWP {$name = $VARNAME.text;}
+getname returns [String result]
+        :VARNAME TWP {$result = $VARNAME.text;}
         ;
 
 getdata returns [Data result]

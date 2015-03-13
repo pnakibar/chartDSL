@@ -3,13 +3,18 @@ grammar MyLang;
 @header {
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.ChartFactory;
+import org.jfree.chart.JFreeChart;
 }
-expr returns [Data result]
-        :r = adddata {$result = $r.result;}
+
+expr returns [JFreeChart result]
+        :getname getdata {$result = ($getdata.result).createChart($getname.name);}
         ;
 
+getname returns [String name]
+        :VARNAME TWP {$name = $VARNAME.text;}
+        ;
 
-adddata returns [Data result]
+getdata returns [Data result]
         : PIE piedata {$result = $piedata.result;}
         | CHART chartdata {$result = $chartdata.result;}
         ;
@@ -47,6 +52,10 @@ RPAR    : ')' ;
 LBR     : '{';
 RBR     : '}';
 TWP     : ':';
+
+WINDOW  : 'window';
+JPG     : 'jpg';
+PNG     : 'png';
 
 
 fragment DIGIT : [0-9] ;

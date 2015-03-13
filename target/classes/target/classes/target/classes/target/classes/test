@@ -1,5 +1,5 @@
 my_chart:
-show as png(666x666):
+show as window(666x666):
 chart{
     apple:qq:3,
     microsoft:qq:4

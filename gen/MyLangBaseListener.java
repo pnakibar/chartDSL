@@ -46,6 +46,18 @@ public class MyLangBaseListener implements MyLangListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterShowAsWindow(@NotNull MyLangParser.ShowAsWindowContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitShowAsWindow(@NotNull MyLangParser.ShowAsWindowContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterShowAsPNG(@NotNull MyLangParser.ShowAsPNGContext ctx) { }
 	/**
 	 * {@inheritDoc}
