@@ -34,13 +34,13 @@ public class MyLangBaseListener implements MyLangListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterGetshowas(@NotNull MyLangParser.GetshowasContext ctx) { }
+	@Override public void enterGetShowAs(@NotNull MyLangParser.GetShowAsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitGetshowas(@NotNull MyLangParser.GetshowasContext ctx) { }
+	@Override public void exitGetShowAs(@NotNull MyLangParser.GetShowAsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

@@ -4,23 +4,23 @@ grammar MyLang;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.ChartFactory;
 }
-sttmnt returns [Chart result]
-        : CHARTS {$result = new Chart;}
+expr returns [Data result]
+        @init {
+               Data data = new Data();
+        }
+        : VARNAME ASSIGNMENT NUM ASSIGNMENTEND {data.add($VARNAME.text, $NUM.text);}
+        | END {$result = data;}
         ;
-expr    returns [String result]
-        : VARNAME {$result = (new Chart($VARNAME.text)).toString();}
-        ;
-
-
-
 
 CHARTS  : 'pie'
         | 'line'
         ;
-
+ASSIGNMENTEND : ';';
+END : 'end';
 VARNAME : [a-zA-z]+;
 
 NUM     : DIGIT+ ;
 fragment DIGIT : [0-9] ;
 
 ASSIGNMENT : ':=';
+WS      : [ \t\r\n]+ -> skip ;

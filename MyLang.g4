@@ -6,11 +6,11 @@ import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
 }
 
-expr returns [JFreeChart result]
-        :getname SHOWAS getshowas TWP getdata {$result = ($getdata.result).createChart($getname.name);}
+expr
+        :getname SHOWAS getShowAs TWP getdata /*invoke Save.save*/{$getShowAs.result.save($getname.result, ($getdata.result).createChart($getname.result));}
         ;
 
-getshowas returns [Save result]
+getShowAs returns [Save result]
         :PNG showAsPNG {$result = $showAsPNG.result;}
         |JPEG showAsJPEG {$result = $showAsJPEG.result;}
         //TODO: WINDOW view
@@ -24,8 +24,8 @@ showAsJPEG returns [Save result]
         ;
 
 
-getname returns [String name]
-        :VARNAME TWP {$name = $VARNAME.text;}
+getname returns [String result]
+        :VARNAME TWP {$result = $VARNAME.text;}
         ;
 
 getdata returns [Data result]

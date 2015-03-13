@@ -19,7 +19,11 @@ public class SavePNG extends Save {
     }
 
     @Override
-    public void save(String location, JFreeChart chart) throws IOException {
-        ChartUtilities.saveChartAsPNG(new File(location + ".png"), chart, super.width, super.height);
+    public void save(String location, JFreeChart chart) {
+        try {
+            ChartUtilities.saveChartAsPNG(new File(location + ".png"), chart, super.width, super.height);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -10,7 +10,7 @@ expr returns [Data result]
 
 
 adddata returns [Data result]
-        : piedata {$result = $piedata.result;}
+        : PIE piedata {$result = $piedata.result;}
         /*|CHART chartdata {$result = chartdata.result;}*/
         ;
 
@@ -19,7 +19,7 @@ piedata returns [Data result]
         Data data = DataFactory.fabricate("pie");
         }
     :
-        PIE LBR
+        LBR
             column=VARNAME TWP value=NUM {data.add($column.text, $value.text);}
             (COMMA column=VARNAME TWP value=NUM {data.add($column.text, $value.text);})*
         RBR {$result = data;}

@@ -8,7 +8,7 @@ pie{
     microsoft:5
 }
 
-My chart:
+chart:
 show as %png(%width x %height) in %directory
 pie{
     apple:4,

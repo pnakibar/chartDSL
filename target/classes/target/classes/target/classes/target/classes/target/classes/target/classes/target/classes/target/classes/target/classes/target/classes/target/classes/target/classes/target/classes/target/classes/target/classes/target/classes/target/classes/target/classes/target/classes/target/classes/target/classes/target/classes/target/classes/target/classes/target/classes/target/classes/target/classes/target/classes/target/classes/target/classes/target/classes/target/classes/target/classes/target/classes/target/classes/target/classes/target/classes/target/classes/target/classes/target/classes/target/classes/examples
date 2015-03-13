@@ -1,0 +1,16 @@
+chart{
+    apple:qq:3,
+    microsoft:qq:4
+}
+
+pie{
+    apple:4,
+    microsoft:5
+}
+
+My chart:
+show as %png(%width x %height) in %directory
+pie{
+    apple:4,
+    microsoft:5
+}

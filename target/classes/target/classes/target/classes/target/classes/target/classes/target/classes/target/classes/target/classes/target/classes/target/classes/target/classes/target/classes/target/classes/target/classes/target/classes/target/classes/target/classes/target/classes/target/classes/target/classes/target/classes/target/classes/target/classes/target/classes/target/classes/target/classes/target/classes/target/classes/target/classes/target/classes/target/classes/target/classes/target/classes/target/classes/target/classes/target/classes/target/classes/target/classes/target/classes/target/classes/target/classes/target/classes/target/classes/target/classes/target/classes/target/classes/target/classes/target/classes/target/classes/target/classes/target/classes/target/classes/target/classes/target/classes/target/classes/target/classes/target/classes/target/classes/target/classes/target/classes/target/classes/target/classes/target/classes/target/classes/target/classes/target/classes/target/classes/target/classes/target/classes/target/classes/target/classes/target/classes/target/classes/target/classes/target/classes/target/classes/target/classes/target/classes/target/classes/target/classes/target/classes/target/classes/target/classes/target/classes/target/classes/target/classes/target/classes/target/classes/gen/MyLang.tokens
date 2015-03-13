@@ -4,6 +4,7 @@ END=3
 VARNAME=4
 NUM=5
 ASSIGNMENT=6
+WS=7
 ';'=2
 'end'=3
 ':='=6

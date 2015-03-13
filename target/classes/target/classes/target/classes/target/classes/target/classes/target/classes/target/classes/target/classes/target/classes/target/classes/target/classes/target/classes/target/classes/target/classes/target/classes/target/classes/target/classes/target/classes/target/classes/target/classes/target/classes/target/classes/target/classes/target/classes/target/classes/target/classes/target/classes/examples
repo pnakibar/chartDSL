@@ -8,9 +8,7 @@ pie{
     microsoft:5
 }
 
-chart:
-show as %png(%width x %height) in %directory
-pie{
+chart:show as %png(%width x %height) as a %pie{
     apple:4,
     microsoft:5
 }

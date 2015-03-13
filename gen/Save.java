@@ -22,7 +22,7 @@ public abstract class Save {
         this.height = new Integer(height);
     }
 
-    public abstract void save(String location, JFreeChart chart) throws IOException;
+    public abstract void save(String location, JFreeChart chart);
 
     public Integer getWidth() {
         return width;

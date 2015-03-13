@@ -8,7 +8,7 @@ expr returns [Data result]
         @init {
                Data data = new Data();
         }
-        : VARNAME ASSIGNMENT NUM ASSIGNMENTEND {data.add($VARNAME.text, $NUM.text);}
+        : VARNAME ASSIGNMENT NUM ASSIGNMENTEND {data.add($VARNAME.text, $NUM.text);System.out.printf($VARNAME.text);}
         | END {$result = data;}
         ;
 

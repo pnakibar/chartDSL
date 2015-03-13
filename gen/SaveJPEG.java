@@ -17,8 +17,12 @@ public class SaveJPEG extends Save {
         super(width, height);
     }
     @Override
-    public void save(String location, JFreeChart chart) throws IOException {
-        ChartUtilities.saveChartAsJPEG(new File(location + ".jpeg"), chart, super.width, super.height);
+    public void save(String location, JFreeChart chart)  {
+        try {
+            ChartUtilities.saveChartAsJPEG(new File(location + ".jpeg"), chart, super.width, super.height);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
 

@@ -7,7 +7,7 @@ import org.jfree.chart.JFreeChart;
 }
 
 expr returns [JFreeChart result]
-        :getname SHOWAS getshowas getdata {$result = ($getdata.result).createChart($getname.name);}
+        :getname SHOWAS getshowas TWP getdata {$result = ($getdata.result).createChart($getname.name);}
         ;
 
 getshowas returns [Save result]
@@ -17,10 +17,10 @@ getshowas returns [Save result]
         ;
 
 showAsPNG returns [Save result]
-        :LPAR height=NUM X width=NUM RPAR {System.out.printf($height.text);}/*{$result = new SavePNG($height.text, $width.text);}*/
+        :LPAR height=NUM X width=NUM RPAR {$result = new SavePNG($height.text, $width.text);}
         ;
 showAsJPEG returns [Save result]
-        :LPAR height=NUM X width=NUM RPAR /*{$result = new SaveJPEG($height.text, $width.text);}*/
+        :LPAR height=NUM X width=NUM RPAR {$result = new SaveJPEG($height.text, $width.text);}
         ;
 
 

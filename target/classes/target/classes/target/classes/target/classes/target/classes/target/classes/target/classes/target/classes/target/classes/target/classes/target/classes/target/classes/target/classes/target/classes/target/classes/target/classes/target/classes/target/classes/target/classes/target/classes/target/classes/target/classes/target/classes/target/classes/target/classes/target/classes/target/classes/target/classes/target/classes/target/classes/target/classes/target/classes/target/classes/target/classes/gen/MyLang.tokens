@@ -12,6 +12,7 @@ NUM=11
 VARNAME=12
 ASSIGNMENT=13
 WS=14
+ALPHA=15
 'pie'=1
 'chart'=2
 ','=3

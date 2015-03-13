@@ -7,11 +7,12 @@
 grammar MyLang;
 
 
-expr    :  definevar
+expr    :  definechart
         ;
 
-definevar
-        : VARNAME ASSIGNMENT CHARTS
+
+definchart returns [JFreeChart chartmodel]
+        : VARNAME ASSIGNMENT CHARTS {$result = new Chart($ASSIGNMENT.text)}
         ;
 
 CHARTS  : 'pie'
@@ -31,3 +32,5 @@ DIGIT   : [0-9]
 NUM     : DIGIT+
         ;
 
+
+WS      : [\s\t\r\n]+ -> skip ;

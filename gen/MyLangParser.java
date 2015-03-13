@@ -26,10 +26,10 @@ public class MyLangParser extends Parser {
 		TWP=10, X=11, SHOWAS=12, WINDOW=13, JPEG=14, PNG=15, NUM=16, VARNAME=17, 
 		ASSIGNMENT=18, WS=19;
 	public static final int
-		RULE_expr = 0, RULE_getshowas = 1, RULE_showAsPNG = 2, RULE_showAsJPEG = 3, 
+		RULE_expr = 0, RULE_getShowAs = 1, RULE_showAsPNG = 2, RULE_showAsJPEG = 3, 
 		RULE_getname = 4, RULE_getdata = 5, RULE_piedata = 6, RULE_chartdata = 7;
 	public static final String[] ruleNames = {
-		"expr", "getshowas", "showAsPNG", "showAsJPEG", "getname", "getdata", 
+		"expr", "getShowAs", "showAsPNG", "showAsJPEG", "getname", "getdata", 
 		"piedata", "chartdata"
 	};
 
@@ -93,15 +93,15 @@ public class MyLangParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 	public static class ExprContext extends ParserRuleContext {
-		public JFreeChart result;
 		public GetnameContext getname;
+		public GetShowAsContext getShowAs;
 		public GetdataContext getdata;
 		public GetnameContext getname() {
 			return getRuleContext(GetnameContext.class,0);
 		}
 		public TerminalNode SHOWAS() { return getToken(MyLangParser.SHOWAS, 0); }
-		public GetshowasContext getshowas() {
-			return getRuleContext(GetshowasContext.class,0);
+		public GetShowAsContext getShowAs() {
+			return getRuleContext(GetShowAsContext.class,0);
 		}
 		public TerminalNode TWP() { return getToken(MyLangParser.TWP, 0); }
 		public GetdataContext getdata() {
@@ -132,12 +132,12 @@ public class MyLangParser extends Parser {
 			setState(17); 
 			match(SHOWAS);
 			setState(18); 
-			getshowas();
+			((ExprContext)_localctx).getShowAs = getShowAs();
 			setState(19); 
 			match(TWP);
 			setState(20); 
 			((ExprContext)_localctx).getdata = getdata();
-			((ExprContext)_localctx).result =  (((ExprContext)_localctx).getdata.result).createChart(((ExprContext)_localctx).getname.name);
+			((ExprContext)_localctx).getShowAs.result.save(((ExprContext)_localctx).getname.result, (((ExprContext)_localctx).getdata.result).createChart(((ExprContext)_localctx).getname.result));
 			}
 		}
 		catch (RecognitionException re) {
@@ -151,7 +151,7 @@ public class MyLangParser extends Parser {
 		return _localctx;
 	}
 
-	public static class GetshowasContext extends ParserRuleContext {
+	public static class GetShowAsContext extends ParserRuleContext {
 		public Save result;
 		public ShowAsPNGContext showAsPNG;
 		public ShowAsJPEGContext showAsJPEG;
@@ -163,23 +163,23 @@ public class MyLangParser extends Parser {
 		public ShowAsJPEGContext showAsJPEG() {
 			return getRuleContext(ShowAsJPEGContext.class,0);
 		}
-		public GetshowasContext(ParserRuleContext parent, int invokingState) {
+		public GetShowAsContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_getshowas; }
+		@Override public int getRuleIndex() { return RULE_getShowAs; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MyLangListener ) ((MyLangListener)listener).enterGetshowas(this);
+			if ( listener instanceof MyLangListener ) ((MyLangListener)listener).enterGetShowAs(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MyLangListener ) ((MyLangListener)listener).exitGetshowas(this);
+			if ( listener instanceof MyLangListener ) ((MyLangListener)listener).exitGetShowAs(this);
 		}
 	}
 
-	public final GetshowasContext getshowas() throws RecognitionException {
-		GetshowasContext _localctx = new GetshowasContext(_ctx, getState());
-		enterRule(_localctx, 2, RULE_getshowas);
+	public final GetShowAsContext getShowAs() throws RecognitionException {
+		GetShowAsContext _localctx = new GetShowAsContext(_ctx, getState());
+		enterRule(_localctx, 2, RULE_getShowAs);
 		try {
 			setState(31);
 			switch (_input.LA(1)) {
@@ -189,8 +189,8 @@ public class MyLangParser extends Parser {
 				setState(23); 
 				match(PNG);
 				setState(24); 
-				((GetshowasContext)_localctx).showAsPNG = showAsPNG();
-				((GetshowasContext)_localctx).result =  ((GetshowasContext)_localctx).showAsPNG.result;
+				((GetShowAsContext)_localctx).showAsPNG = showAsPNG();
+				((GetShowAsContext)_localctx).result =  ((GetShowAsContext)_localctx).showAsPNG.result;
 				}
 				break;
 			case JPEG:
@@ -199,8 +199,8 @@ public class MyLangParser extends Parser {
 				setState(27); 
 				match(JPEG);
 				setState(28); 
-				((GetshowasContext)_localctx).showAsJPEG = showAsJPEG();
-				((GetshowasContext)_localctx).result =  ((GetshowasContext)_localctx).showAsJPEG.result;
+				((GetShowAsContext)_localctx).showAsJPEG = showAsJPEG();
+				((GetShowAsContext)_localctx).result =  ((GetShowAsContext)_localctx).showAsJPEG.result;
 				}
 				break;
 			default:
@@ -329,7 +329,7 @@ public class MyLangParser extends Parser {
 	}
 
 	public static class GetnameContext extends ParserRuleContext {
-		public String name;
+		public String result;
 		public Token VARNAME;
 		public TerminalNode VARNAME() { return getToken(MyLangParser.VARNAME, 0); }
 		public TerminalNode TWP() { return getToken(MyLangParser.TWP, 0); }
@@ -357,7 +357,7 @@ public class MyLangParser extends Parser {
 			((GetnameContext)_localctx).VARNAME = match(VARNAME);
 			setState(48); 
 			match(TWP);
-			((GetnameContext)_localctx).name =  (((GetnameContext)_localctx).VARNAME!=null?((GetnameContext)_localctx).VARNAME.getText():null);
+			((GetnameContext)_localctx).result =  (((GetnameContext)_localctx).VARNAME!=null?((GetnameContext)_localctx).VARNAME.getText():null);
 			}
 		}
 		catch (RecognitionException re) {

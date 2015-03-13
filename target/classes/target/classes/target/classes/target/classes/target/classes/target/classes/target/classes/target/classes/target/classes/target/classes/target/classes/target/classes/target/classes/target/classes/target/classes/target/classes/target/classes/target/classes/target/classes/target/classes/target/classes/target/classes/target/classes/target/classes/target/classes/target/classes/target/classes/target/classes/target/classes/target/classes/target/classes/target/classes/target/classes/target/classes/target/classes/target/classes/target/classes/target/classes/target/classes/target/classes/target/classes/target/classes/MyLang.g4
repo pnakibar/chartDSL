@@ -31,8 +31,8 @@ chartdata returns [Data result]
         }
     :
         LBR
-            column=VARNAME TWP line=ID TWP value=NUM {data.add($column.text, $line.text, $value.text);}
-            (COMMA column=VARNAME TWP line=ID TWP value=NUM {data.add($column.text, $line.text, $value.text);})*
+            column=VARNAME TWP line=VARNAME TWP value=NUM {data.add($column.text, $line.text, $value.text);}
+            (COMMA column=VARNAME TWP line=VARNAME TWP value=NUM {data.add($column.text, $line.text, $value.text);})*
         RBR {$result = data;}
     ;
 
@@ -53,7 +53,6 @@ fragment DIGIT : [0-9] ;
 fragment ALPHA : [_a-zA-Z] ;
 NUM     : DIGIT+ ;
 VARNAME : ALPHA+;
-ID      : ALPHA (ALPHA | DIGIT)* ;
 
 ASSIGNMENT : ':=';
 

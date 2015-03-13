@@ -4,8 +4,9 @@ grammar MyLang;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.ChartFactory;
 }
+
 expr returns [Data result]
-        :r = adddata {$result = $r.result;}
+        :adddata {$result = $adddata.result}
         ;
 
 
@@ -13,6 +14,8 @@ adddata returns [Data result]
         : PIE piedata {$result = $piedata.result;}
         | CHART chartdata {$result = $chartdata.result;}
         ;
+
+
 
 piedata returns [Data result]
 @init   {

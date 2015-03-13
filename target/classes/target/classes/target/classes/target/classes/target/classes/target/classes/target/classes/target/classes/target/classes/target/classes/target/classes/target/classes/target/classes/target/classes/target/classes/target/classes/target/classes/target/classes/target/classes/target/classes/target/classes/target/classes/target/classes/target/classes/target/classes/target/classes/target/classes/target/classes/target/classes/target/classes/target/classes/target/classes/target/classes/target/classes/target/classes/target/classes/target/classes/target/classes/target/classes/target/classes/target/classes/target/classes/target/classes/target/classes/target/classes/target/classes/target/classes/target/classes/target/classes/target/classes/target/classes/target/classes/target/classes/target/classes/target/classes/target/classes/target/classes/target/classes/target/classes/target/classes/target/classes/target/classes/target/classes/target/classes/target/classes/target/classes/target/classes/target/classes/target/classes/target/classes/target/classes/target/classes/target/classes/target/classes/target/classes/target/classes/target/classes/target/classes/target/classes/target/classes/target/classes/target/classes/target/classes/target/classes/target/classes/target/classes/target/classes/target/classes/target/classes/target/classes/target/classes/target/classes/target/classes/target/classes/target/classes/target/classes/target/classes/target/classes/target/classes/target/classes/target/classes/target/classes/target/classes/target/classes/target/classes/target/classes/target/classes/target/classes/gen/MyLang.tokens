@@ -8,6 +8,7 @@ MINUS=7
 ASSIGNMENT=8
 DIGIT=9
 NUM=10
+WS=11
 '[a-zA-z]+'=3
 '*'=4
 '/'=5
