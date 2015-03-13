@@ -1,5 +1,5 @@
-#Grafik
-##Linguagem de geração de gráficos!
+#Grafik 
+Linguagem de geração de gráficos!
 
 #Exemplos
 ```
