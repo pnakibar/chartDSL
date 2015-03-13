@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3ee6553-92a5-4ab2-8677-ed128c407dd4" name="Default" comment="Funcionando para o test!&#10;(achar o tipo do gráfico [pie ou chart])">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/MyLangLexer.tokens" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/ChartData.class" afterPath="$PROJECT_DIR$/target/classes/gen/ChartData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangLexer.class" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangLexer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangParser$ChartdataContext.class" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangParser$ChartdataContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangParser$ExprContext.class" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangParser$ExprContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangParser$GetShowAsContext.class" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangParser$GetShowAsContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangParser$GetnameContext.class" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangParser$GetnameContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangParser$PiedataContext.class" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangParser$PiedataContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangParser$ShowAsJPEGContext.class" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangParser$ShowAsJPEGContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangParser$ShowAsPNGContext.class" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangParser$ShowAsPNGContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangParser$ShowAsWindowContext.class" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangParser$ShowAsWindowContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangParser.class" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/ChartData.java" afterPath="$PROJECT_DIR$/gen/ChartData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLang.g4" afterPath="$PROJECT_DIR$/MyLang.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/MyLang.g4" afterPath="$PROJECT_DIR$/target/classes/MyLang.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/MyLang.iml" afterPath="$PROJECT_DIR$/target/classes/MyLang.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/MyLang.tokens" afterPath="$PROJECT_DIR$/gen/MyLang.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/MyLang.tokens" afterPath="$PROJECT_DIR$/target/classes/MyLang.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLang.tokens" afterPath="$PROJECT_DIR$/target/classes/gen/MyLang.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/MyLangLexer.java" afterPath="$PROJECT_DIR$/gen/MyLangLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/MyLangLexer.tokens" afterPath="$PROJECT_DIR$/gen/MyLangLexer.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangLexer.tokens" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangLexer.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/MyLangParser.java" afterPath="$PROJECT_DIR$/gen/MyLangParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pom.xml" afterPath="$PROJECT_DIR$/target/classes/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test" afterPath="$PROJECT_DIR$/test" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test" afterPath="$PROJECT_DIR$/target/classes/test" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/.idea/workspace.xml" afterPath="$PROJECT_DIR$/target/classes/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="MyLang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,21 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyLang.g4" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyLang.g4" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyLang.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24108107" vertical-offset="767" max-vertical-offset="1692">
+            <state vertical-scroll-proportion="0.0" vertical-offset="767" max-vertical-offset="1692">
               <caret line="55" column="86" selection-start-line="55" selection-start-column="86" selection-end-line="55" selection-end-column="86" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="227" max-vertical-offset="1152">
-              <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.8637838" vertical-offset="227" max-vertical-offset="1152">
+              <caret line="57" column="3" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -1146,18 +1118,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/MyLang.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="227" max-vertical-offset="1152">
-          <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="767" max-vertical-offset="1692">
+          <caret line="55" column="86" selection-start-line="55" selection-start-column="86" selection-end-line="55" selection-end-column="86" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyLang.g4">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24108107" vertical-offset="767" max-vertical-offset="1692">
-          <caret line="55" column="86" selection-start-line="55" selection-start-column="86" selection-end-line="55" selection-end-column="86" />
+        <state vertical-scroll-proportion="0.8637838" vertical-offset="227" max-vertical-offset="1152">
+          <caret line="57" column="3" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="3" />
           <folding />
         </state>
       </provider>
