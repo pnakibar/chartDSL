@@ -83,7 +83,9 @@ PNG     : 'png';
 fragment DIGIT : [0-9] ;
 fragment ALPHA : [_a-zA-Z] ;
 NUM     : DIGIT+ ;
-DOUBLE  : DIGIT+ (DOT? DIGIT+);
+
+DOUBLE  :NUM (DOT NUM)?;
+
 VARNAME : ALPHA+;
 
 ASSIGNMENT : ':=';

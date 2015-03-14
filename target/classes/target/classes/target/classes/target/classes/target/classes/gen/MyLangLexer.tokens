@@ -17,9 +17,10 @@ JPEG=16
 PNG=17
 NUM=18
 DOUBLE=19
-VARNAME=20
-ASSIGNMENT=21
-WS=22
+REALDOUBLE=20
+VARNAME=21
+ASSIGNMENT=22
+WS=23
 'pie'=1
 'chart'=2
 ','=3
@@ -37,4 +38,4 @@ WS=22
 'window'=15
 'jpeg'=16
 'png'=17
-':='=21
+':='=22

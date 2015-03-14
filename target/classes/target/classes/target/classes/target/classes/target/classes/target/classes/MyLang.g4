@@ -40,8 +40,8 @@ piedata returns [Data result]
         }
     :
         LBR
-            column=VARNAME TWP value=(DOUBLE | NUM) {data.add($column.text, $value.text);}
-            (COMMA column=VARNAME TWP value=(DOUBLE | NUM) {data.add($column.text, $value.text);})*
+            column=VARNAME TWP value=REALDOUBLE {data.add($column.text, $value.text);}
+            (COMMA column=VARNAME TWP value=REALDOUBLE {data.add($column.text, $value.text);})*
         RBR {$result = data;}
     ;
 //TODO: Informações da tabela 'chart', não está exibindo as da tabela e superiores
@@ -85,6 +85,8 @@ fragment ALPHA : [_a-zA-Z] ;
 NUM     : DIGIT+ ;
 
 DOUBLE  :NUM DOT NUM;
+REALDOUBLE  : ((NUM DOT NUM) | NUM);
+
 
 VARNAME : ALPHA+;
 

@@ -1,25 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3ee6553-92a5-4ab2-8677-ed128c407dd4" name="Default" comment="Funcionando para o test!&#10;(achar o tipo do gráfico [pie ou chart])">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/exemplos/vendas.gr" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/Chart.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/gen/Chart.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/test" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/test" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/target/classes/test" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/target/classes/gen/MyLang.tokens" afterPath="$PROJECT_DIR$/target/classes/target/classes/gen/MyLang.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/gen/MyLang.tokens" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/gen/MyLang.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/target/classes/gen/MyLangLexer.tokens" afterPath="$PROJECT_DIR$/target/classes/target/classes/gen/MyLangLexer.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/gen/MyLangLexer.tokens" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/gen/MyLangLexer.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/Testing.java" afterPath="$PROJECT_DIR$/gen/Testing.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test" afterPath="$PROJECT_DIR$/test" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test" afterPath="$PROJECT_DIR$/target/classes/test" />
+    <list default="true" id="e3ee6553-92a5-4ab2-8677-ed128c407dd4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/.idea/workspace.xml" afterPath="$PROJECT_DIR$/target/classes/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/target/classes/.idea/workspace.xml" afterPath="$PROJECT_DIR$/target/classes/target/classes/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/workspace.xml" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/workspace.xml" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/workspace.xml" />
     </list>
     <ignored path="MyLang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyLang.g4" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyLang.g4" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyLang.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="767" max-vertical-offset="1692">
-              <caret line="55" column="86" selection-start-line="55" selection-start-column="86" selection-end-line="55" selection-end-column="86" />
+            <state vertical-scroll-proportion="0.30864197" vertical-offset="1053" max-vertical-offset="1782">
+              <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -58,20 +41,13 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="767" max-vertical-offset="1710">
-              <caret line="89" column="9" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
+            <state vertical-scroll-proportion="-45.5625" vertical-offset="0" max-vertical-offset="1584">
+              <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
-              <caret line="16" column="19" selection-start-line="9" selection-start-column="4" selection-end-line="21" selection-end-column="19" />
-              <folding />
-            </state>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
           </provider>
         </entry>
       </file>
@@ -85,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Testing.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Testing.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gen/Testing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27160493" vertical-offset="0" max-vertical-offset="729">
-              <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -98,37 +74,12 @@
       <file leaf-file-name="MyLang.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gen/MyLang.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
+              <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vendas.gr" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exemplos/vendas.gr">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.04" vertical-offset="0" max-vertical-offset="234">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="my_chart.jpeg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my_chart.jpeg">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
@@ -163,12 +114,14 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/gen/ChartData.java" />
         <option value="$PROJECT_DIR$/gen/MyLangParser.java" />
-        <option value="$PROJECT_DIR$/MyLang.g4" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/gen/MyLang.java" />
-        <option value="$PROJECT_DIR$/test" />
         <option value="$PROJECT_DIR$/exemplos/vendas.gr" />
+        <option value="$PROJECT_DIR$/exemplos/paises.gr" />
+        <option value="$PROJECT_DIR$/MyLang.g4" />
+        <option value="$PROJECT_DIR$/test" />
         <option value="$PROJECT_DIR$/gen/Testing.java" />
+        <option value="$PROJECT_DIR$/exemplos/vendas2.gr" />
+        <option value="$PROJECT_DIR$/gen/MyLang.java" />
       </list>
     </option>
   </component>
@@ -223,34 +176,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="MyLang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyLang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyLang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyLang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyLang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exemplos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -326,6 +251,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/exemplos" />
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -621,7 +547,13 @@
       <option name="project" value="LOCAL" />
       <updated>1426214143107</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="OK!">
+      <created>1426301929841</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1426301929841</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -672,11 +604,12 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Funcionando para o test!&#10;(achar o tipo do gráfico [pie ou chart])" />
-    <option name="LAST_COMMIT_MESSAGE" value="Funcionando para o test!&#10;(achar o tipo do gráfico [pie ou chart])" />
+    <MESSAGE value="OK!" />
+    <option name="LAST_COMMIT_MESSAGE" value="OK!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -685,25 +618,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MyLang.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="1692">
-          <caret line="55" column="86" selection-start-line="55" selection-start-column="86" selection-end-line="55" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my_chart.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gen/Save.java">
@@ -798,11 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_chart.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gen/Save.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="594">
@@ -887,11 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_chart.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gen/Save.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="37" max-vertical-offset="648">
@@ -966,16 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PieChart.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PieChart.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gen/DataFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
@@ -987,13 +887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09030101" vertical-offset="234" max-vertical-offset="1836">
           <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gen/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1054,11 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_chart.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gen/MyLangParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="12304" max-vertical-offset="13536">
@@ -1069,42 +957,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
-          <caret line="16" column="19" selection-start-line="9" selection-start-column="4" selection-end-line="21" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyLang.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="767" max-vertical-offset="1692">
-          <caret line="55" column="86" selection-start-line="55" selection-start-column="86" selection-end-line="55" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="767" max-vertical-offset="1710">
-          <caret line="89" column="9" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gen/MyLang.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gen/PieData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="846">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39506173" vertical-offset="0" max-vertical-offset="729">
+          <caret line="16" column="19" selection-start-line="9" selection-start-column="4" selection-end-line="21" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1117,31 +981,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_chart.jpeg">
+    <entry file="file://$PROJECT_DIR$/exemplos/PaisesPorArea.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test">
+    <entry file="file://$PROJECT_DIR$/exemplos/paises.gr">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
+        <state vertical-scroll-proportion="-5.04" vertical-offset="0" max-vertical-offset="270">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exemplos/vendas.gr">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.04" vertical-offset="0" max-vertical-offset="234">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="234">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gen/Testing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27160493" vertical-offset="0" max-vertical-offset="729">
-          <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exemplos/vendas2.gr">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="704">
+          <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.024691358" vertical-offset="0" max-vertical-offset="729">
+          <caret line="1" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24691358" vertical-offset="0" max-vertical-offset="729">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen/MyLang.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
+          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-45.5625" vertical-offset="0" max-vertical-offset="1584">
+          <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLang.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30864197" vertical-offset="1053" max-vertical-offset="1782">
+          <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
           <folding />
         </state>
       </provider>
