@@ -1,0 +1,8 @@
+vendas:
+show as jpeg(666x666):
+chart{
+    apple:vendas:3,
+    microsoft:vendas:4
+    #empresa
+    #trimestre
+}

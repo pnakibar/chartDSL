@@ -2,49 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3ee6553-92a5-4ab2-8677-ed128c407dd4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/exemplos/PaisesPorArea.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/exemplos/vendas.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/exemplos/vendas2.png" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/PieChart.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/gen/Chart.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/my_chart.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/target/classes/PieChart.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/target/classes/my_chart.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/PieChart.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/my_chart.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/my_chart.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangLexer.class" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangLexer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangParser$ChartdataContext.class" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangParser$ChartdataContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangParser$ExprContext.class" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangParser$ExprContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangParser$GetShowAsContext.class" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangParser$GetShowAsContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangParser$GetnameContext.class" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangParser$GetnameContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangParser$PiedataContext.class" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangParser$PiedataContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangParser$ShowAsJPEGContext.class" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangParser$ShowAsJPEGContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangParser$ShowAsPNGContext.class" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangParser$ShowAsPNGContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangParser$ShowAsWindowContext.class" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangParser$ShowAsWindowContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangParser.class" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLang.g4" afterPath="$PROJECT_DIR$/MyLang.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/MyLang.g4" afterPath="$PROJECT_DIR$/target/classes/MyLang.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLang.iml" afterPath="$PROJECT_DIR$/MyLang.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLang.tokens" afterPath="$PROJECT_DIR$/target/classes/gen/MyLang.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/target/classes/gen/MyLang.tokens" afterPath="$PROJECT_DIR$/target/classes/target/classes/gen/MyLang.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/gen/MyLang.tokens" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/gen/MyLang.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/gen/MyLangLexer.tokens" afterPath="$PROJECT_DIR$/target/classes/gen/MyLangLexer.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/target/classes/gen/MyLangLexer.tokens" afterPath="$PROJECT_DIR$/target/classes/target/classes/gen/MyLangLexer.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/gen/MyLangLexer.tokens" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/gen/MyLangLexer.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exemplos/paises.gr" afterPath="$PROJECT_DIR$/exemplos/paises.gr" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test" afterPath="$PROJECT_DIR$/test" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test" afterPath="$PROJECT_DIR$/target/classes/test" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/target/classes/test" afterPath="$PROJECT_DIR$/target/classes/target/classes/test" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/test" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/test" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/test" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/test" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exemplos/vendas.gr" afterPath="$PROJECT_DIR$/exemplos/vendas.gr" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exemplos/vendas2.gr" afterPath="$PROJECT_DIR$/exemplos/vendas2.gr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/.idea/workspace.xml" afterPath="$PROJECT_DIR$/target/classes/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/target/classes/.idea/workspace.xml" afterPath="$PROJECT_DIR$/target/classes/target/classes/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/workspace.xml" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/workspace.xml" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/workspace.xml" />
     </list>
     <ignored path="MyLang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,13 +28,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyLang.g4" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyLang.g4" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyLang.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="567" max-vertical-offset="1782">
-              <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.30864197" vertical-offset="1053" max-vertical-offset="1782">
+              <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-45.5625" vertical-offset="0" max-vertical-offset="1584">
+              <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
           </provider>
         </entry>
       </file>
@@ -100,10 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyLang.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyLang.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gen/MyLang.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37037036" vertical-offset="0" max-vertical-offset="729">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
               <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -576,12 +547,18 @@
       <option name="project" value="LOCAL" />
       <updated>1426214143107</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="OK!">
+      <created>1426301929841</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1426301929841</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -598,7 +575,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2052356" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970452" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24947916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24947916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -627,7 +604,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Funcionando para o test!&#10;(achar o tipo do gráfico [pie ou chart])" />
-    <option name="LAST_COMMIT_MESSAGE" value="Funcionando para o test!&#10;(achar o tipo do gráfico [pie ou chart])" />
+    <MESSAGE value="OK!" />
+    <option name="LAST_COMMIT_MESSAGE" value="OK!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -987,14 +965,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="767" max-vertical-offset="1710">
-          <caret line="89" column="9" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39506173" vertical-offset="0" max-vertical-offset="729">
@@ -1020,14 +990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.04" vertical-offset="0" max-vertical-offset="270">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyLang.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="567" max-vertical-offset="1782">
-          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1074,11 +1036,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gen/MyLang.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37037036" vertical-offset="0" max-vertical-offset="729">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
           <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-45.5625" vertical-offset="0" max-vertical-offset="1584">
+          <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLang.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30864197" vertical-offset="1053" max-vertical-offset="1782">
+          <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
