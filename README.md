@@ -1,5 +1,5 @@
-#Grafik
-##Linguagem de geração de gráficos!
+#Grafik 
+Linguagem de geração de gráficos!
 
 #Exemplos
 ```
@@ -22,17 +22,12 @@ $tipoDoGrafico{
 }
 ```
 ###Para tipo de de exibição temos:
-* window:
-⋅* cria uma janela utilizando java awt exibindo as informações do gráfico;
-⋅⋅* png:
-⋅* salva imagem como um arquivo de imagem .png no diretório raiz do projeto, com o nome da tabela;
-* jpeg:
-⋅* mesma coisa que o png, só que para o formato jpeg
+* window: cria uma janela utilizando java awt exibindo as informações do gráfico;
+* png: salva imagem como um arquivo de imagem .png no diretório raiz do projeto, com o nome da tabela;
+* jpeg: mesma coisa que o png, só que para o formato jpeg
 
-###Tipo do gráfico:
-* pie:
-⋅* gráfico do tipo pizza
-⋅⋅* template para dados:
+###Tipo do gráfico e como definir seus dados:
+* pie: gráfico do tipo pizza
 ```
 pie{
     nome:dado,
@@ -41,10 +36,7 @@ pie{
 }
 ```
 
-* chart:
-⋅* gráfico do tipo tabela
-⋅⋅* template para dados:
-
+* chart: gráfico com linhas
 ```
 chart{
     nome:linha:dado,
@@ -58,7 +50,7 @@ chart{
 }
 ```
 #Construindo o projeto:
-- O projeto está no Maven, e possui como dependencias o jfreechart e o próprio antlr.
+1. O projeto está no Maven, e possui como dependencias o jfreechart e o próprio antlr.
 ```maven
 <dependencies>
         <dependency>
@@ -73,18 +65,18 @@ chart{
         </dependency>
 </dependencies>
 ```
-- O projeto já está pré-compilado, mas caso queira gerar os Lexers e os Parsers, é necessário utilizar o antlr4 para compilar o MyLang.g4 utilize o comando abaixo:
+2. O projeto já está pré-compilado, mas caso queira gerar os Lexers e os Parsers, é necessário utilizar o antlr4 para compilar o MyLang.g4 utilize o comando abaixo:
 ```bash
 antlr4 MyLang.g4 -o ./gen/ -package gen
 ```
 
-- Depois compile os arquivos .java gerados e os arquivos das classes de suporte utilizando o javac:
+3. Depois compile os arquivos .java gerados e os arquivos das classes de suporte utilizando o javac:
 ```bash
 javac nomeArquivo.java
 ```
-- Para ler a sua linguagem execute o programa com o argumento sendo o caminho do arquivo!
+4. Para ler a sua linguagem execute o programa com o argumento sendo o caminho do arquivo!
 ```bash
 java gen.MyLang -test.gr
 ```
 
-.- Obs.: O Testing.java irá interpretar o arquivo test que está no raiz do projeto
+* Obs.: O Testing.java irá interpretar o arquivo test que está no raiz do projeto
