@@ -1,8 +1,10 @@
-my_chart:
-show as window(666x666):
+Vendas:
+show as jpeg(666x666):
 chart{
-    apple:qq:3,
-    microsoft:qq:4
+    apple:vendas:3,
+    microsoft:vendas:4
+    #empresa
+    #trimestre
 }
 
 
