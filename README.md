@@ -2,16 +2,46 @@
 Linguagem de geração de gráficos!
 
 #Exemplos
+* Utilizando png para salvar
 ```
-my_chart:
-show as window(666x666):
-chart{
-    apple:qq:3,
-    microsoft:qq:4
-    #quarter
-    #empresa
+PaisesPorArea:
+show as png(666x666):
+pie{
+   Russia:27.3,
+   Canada:15,
+   China:15.4,
+   EUA:15.4,
+   Australia:12.3,
+   Brazil:13.6
 }
 ```
+![](https://github.com/pnakibar/chartDSL/blob/master/exemplos/PaisesPorArea.png?raw=true "")
+
+
+* Utilizando jpeg
+```
+vendas:
+show as jpeg(666x666):
+chart{
+    apple:vendas:3,
+    microsoft:vendas:4
+    #empresa
+    #trimestre
+}
+```
+![](https://github.com/pnakibar/chartDSL/blob/master/exemplos/vendas.jpeg?raw=true "")
+* Utilizando window para exibir
+```
+vendas2:
+show as window(666x666):
+chart{
+    apple:vendas:3,
+    microsoft:vendas:4
+    #empresa
+    #trimestre
+}
+```
+![](https://github.com/pnakibar/chartDSL/blob/master/exemplos/vendas2.png?raw=true "")
 
 ##template
 ```
