@@ -95,7 +95,7 @@ chart{
         </dependency>
 </dependencies>
 ```
-/*
+
 2. O projeto foi feito utilizando a IDE Intellij IDEA (Community Edition), portanto o arquivo de projeto está nela. Também utilizei o plugin [ANTLR v4 grammar plugin](https://plugins.jetbrains.com/plugin/7358?pr=), para gerar os Lexers e os Parsers a partir de arquivos do *.g4* do Antlr4.
 
 3. Ao importar o projeto no Intellij IDEA, os lançadores customizados que eu utilizei já estarão funcionando.
