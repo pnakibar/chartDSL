@@ -95,18 +95,7 @@ chart{
         </dependency>
 </dependencies>
 ```
-2. O projeto já está pré-compilado, mas caso queira gerar os Lexers e os Parsers, é necessário utilizar o antlr4 para compilar o MyLang.g4 utilize o comando abaixo:
-```bash
-antlr4 MyLang.g4 -o ./gen/ -package gen
-```
+/*
+2. O projeto foi feito utilizando a IDE Intellij IDEA (Community Edition), portanto o arquivo de projeto está nela. Também utilizei o plugin [ANTLR v4 grammar plugin](https://plugins.jetbrains.com/plugin/7358?pr=), para gerar os Lexers e os Parsers a partir de arquivos do *.g4* do Antlr4.
 
-3. Depois compile os arquivos .java gerados e os arquivos das classes de suporte utilizando o javac:
-```bash
-javac nomeArquivo.java
-```
-4. Para ler a sua linguagem execute o programa com o argumento sendo o caminho do arquivo!
-```bash
-java gen.MyLang -test.gr
-```
-
-* Obs.: O Testing.java irá interpretar o arquivo test que está no raiz do projeto
+3. Ao importar o projeto no Intellij IDEA, os lançadores customizados que eu utilizei já estarão funcionando.
