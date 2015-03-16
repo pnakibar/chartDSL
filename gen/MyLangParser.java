@@ -1,4 +1,4 @@
-// Generated from /home/pedronakibar/IdeaProjects/MyLang/MyLang.g4 by ANTLR 4.5
+// Generated from /home/pedronakibar/IdeaProjects/Grafik/MyLang.g4 by ANTLR 4.5
 package gen;
 
 import org.jfree.chart.ChartUtilities;
@@ -94,6 +94,7 @@ public class MyLangParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 	public static class ExprContext extends ParserRuleContext {
+		public String filename;
 		public GetnameContext getname;
 		public GetShowAsContext getShowAs;
 		public GetdataContext getdata;
@@ -138,7 +139,7 @@ public class MyLangParser extends Parser {
 			match(TWP);
 			setState(22); 
 			((ExprContext)_localctx).getdata = getdata();
-			((ExprContext)_localctx).getShowAs.result.save(((ExprContext)_localctx).getname.result, (((ExprContext)_localctx).getdata.result).createChart(((ExprContext)_localctx).getname.result));
+			((ExprContext)_localctx).getShowAs.result.save(((ExprContext)_localctx).getname.result, (((ExprContext)_localctx).getdata.result).createChart(((ExprContext)_localctx).getname.result));((ExprContext)_localctx).filename =  ((ExprContext)_localctx).getname.result+"."+((ExprContext)_localctx).getShowAs.result.getFormat();
 			}
 		}
 		catch (RecognitionException re) {

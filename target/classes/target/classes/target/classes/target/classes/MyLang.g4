@@ -6,8 +6,8 @@ import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
 }
 
-expr
-        :getname SHOWAS getShowAs TWP getdata /*invoke Save.save*/{$getShowAs.result.save($getname.result, ($getdata.result).createChart($getname.result));}
+expr returns [String filename]
+        :getname SHOWAS getShowAs TWP getdata /*invoke Save.save*/{$getShowAs.result.save($getname.result, ($getdata.result).createChart($getname.result));$filename = $getname.result+"."+$getShowAs.result.getFormat();}
         ;
 
 getShowAs returns [Save result]
@@ -44,7 +44,7 @@ piedata returns [Data result]
             (COMMA column=VARNAME TWP value=(DOUBLE | NUM) {data.add($column.text, $value.text);})*
         RBR {$result = data;}
     ;
-//TODO: Informações da tabela 'chart', não está exibindo as da tabela e superiores
+
 chartdata returns [Data result]
 @init   {
         Data data = DataFactory.fabricate("chart");

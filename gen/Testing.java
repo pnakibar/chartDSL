@@ -18,7 +18,13 @@ public class Testing {
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         MyLangParser parser = new MyLangParser(tokens);
         MyLangParser.ExprContext ctx = parser.expr();
-        //System.out.printf(">>> %s\n", ctx.result);
+
+        if (ctx.filename.contains("window")){
+            System.out.println(">>> Janela gerada.");
+        }
+        else{
+            System.out.println(">>> Arquivo gerado em: " + System.getProperty("user.dir") + "/" + ctx.filename);
+        }
 
 
     }

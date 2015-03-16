@@ -13,6 +13,12 @@ public class SaveJPEG extends Save {
     public SaveJPEG(String width, String height) {
         super(width, height);
     }
+
+    @Override
+    public String getFormat() {
+        return "jpeg";
+    }
+
     public SaveJPEG(Integer width, Integer height) {
         super(width, height);
     }

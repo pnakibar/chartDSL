@@ -6,8 +6,8 @@ import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
 }
 
-expr
-        :getname SHOWAS getShowAs TWP getdata /*invoke Save.save*/{$getShowAs.result.save($getname.result, ($getdata.result).createChart($getname.result));}
+expr returns [String filename]
+        :getname SHOWAS getShowAs TWP getdata /*invoke Save.save*/{$getShowAs.result.save($getname.result, ($getdata.result).createChart($getname.result));$filename = $getname.result+"."+$getShowAs.result.getFormat();}
         ;
 
 getShowAs returns [Save result]
@@ -40,19 +40,19 @@ piedata returns [Data result]
         }
     :
         LBR
-            column=VARNAME TWP value=REALDOUBLE {data.add($column.text, $value.text);}
-            (COMMA column=VARNAME TWP value=REALDOUBLE {data.add($column.text, $value.text);})*
+            column=VARNAME TWP value=(DOUBLE | NUM) {data.add($column.text, $value.text);}
+            (COMMA column=VARNAME TWP value=(DOUBLE | NUM) {data.add($column.text, $value.text);})*
         RBR {$result = data;}
     ;
-//TODO: Informações da tabela 'chart', não está exibindo as da tabela e superiores
+
 chartdata returns [Data result]
 @init   {
         Data data = DataFactory.fabricate("chart");
         }
     :
         LBR
-            column=VARNAME TWP line=VARNAME TWP value=NUM {data.add($column.text, $line.text, $value.text);}
-            (COMMA column=VARNAME TWP line=VARNAME TWP value=NUM {data.add($column.text, $line.text, $value.text);})*
+            column=VARNAME TWP line=VARNAME TWP value=(DOUBLE | NUM) {data.add($column.text, $line.text, $value.text);}
+            (COMMA column=VARNAME TWP line=VARNAME TWP value=(DOUBLE | NUM) {data.add($column.text, $line.text, $value.text);})*
             CRUNCH domainLabel=VARNAME   {data.add("domainLabel", $domainLabel.text);}
             CRUNCH rangeLabel =VARNAME   {data.add("rangeLabel", $rangeLabel.text);}
         RBR {$result = data;}
@@ -85,7 +85,6 @@ fragment ALPHA : [_a-zA-Z] ;
 NUM     : DIGIT+ ;
 
 DOUBLE  :NUM DOT NUM;
-REALDOUBLE  : ((NUM DOT NUM) | NUM);
 
 
 VARNAME : ALPHA+;

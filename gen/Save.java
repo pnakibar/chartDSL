@@ -21,7 +21,7 @@ public abstract class Save {
         this.width = new Integer(width);
         this.height = new Integer(height);
     }
-
+    public abstract String getFormat();
     public abstract void save(String location, JFreeChart chart);
 
     public Integer getWidth() {

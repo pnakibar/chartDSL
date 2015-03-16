@@ -14,6 +14,12 @@ public class SavePNG extends Save {
     public SavePNG(String width, String height) {
         super(width, height);
     }
+
+    @Override
+    public String getFormat() {
+        return "png";
+    }
+
     public SavePNG(Integer width, Integer height) {
         super(width, height);
     }

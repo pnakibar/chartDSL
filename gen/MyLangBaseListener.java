@@ -1,4 +1,4 @@
-// Generated from /home/pedronakibar/IdeaProjects/MyLang/MyLang.g4 by ANTLR 4.5
+// Generated from /home/pedronakibar/IdeaProjects/Grafik/MyLang.g4 by ANTLR 4.5
 package gen;
 
 import org.jfree.chart.ChartUtilities;

@@ -17,6 +17,11 @@ public class SaveWindow extends Save {
         super(width, height);
     }
 
+    @Override
+    public String getFormat() {
+        return "window";
+    }
+
 
     @Override
     public void save(String location, JFreeChart chart) {

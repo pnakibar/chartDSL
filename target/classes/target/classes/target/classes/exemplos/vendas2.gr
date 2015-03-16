@@ -1,0 +1,8 @@
+vendas2:
+show as window(666x666):
+chart{
+    apple:vendas:3,
+    microsoft:vendas:4
+    #empresa
+    #trimestre
+}
